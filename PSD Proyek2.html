@@ -1,0 +1,2925 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Business Understanding &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'PSD Proyek2';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FPSD Proyek2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/PSD Proyek2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Business Understanding</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Business Understanding</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-mengenai-dataset-cdc-diabetes-health-indicators"><strong>Penjelasan Mengenai Dataset CDC Diabetes Health Indicators</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-understanding"><strong>Data Understanding</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-fitur"><strong>Penjelasan Fitur</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-processing"><strong>Pre-Processing</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling"><strong>Modelling</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pycaret"><strong>PyCaret</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#light-gradient-boosting-machine-lightgbm">Light Gradient Boosting Machine (LightGBM)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-kerja-lightgbm">Cara Kerja LightGBM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arsitektur-lightbgm">Arsitektur LightBGM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus">Rumus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penggunaan">Penggunaan</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#parameter-lightgbm"><strong>Parameter LightGBM</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-model"><strong>Testing Model</strong></a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="business-understanding">
+<h1><strong>Business Understanding</strong><a class="headerlink" href="#business-understanding" title="Permalink to this heading">#</a></h1>
+<section id="penjelasan-mengenai-dataset-cdc-diabetes-health-indicators">
+<h2><strong>Penjelasan Mengenai Dataset CDC Diabetes Health Indicators</strong><a class="headerlink" href="#penjelasan-mengenai-dataset-cdc-diabetes-health-indicators" title="Permalink to this heading">#</a></h2>
+<p>Pertama sedikit pengetahuan tentang diabetes. Diabetes adalah salah satu penyakit yang paling sering terjadi di seluruh dunia dan jumlah pasien diabetes terus bertambah selama bertahun-tahun. Penyebab utama diabetes masih belum diketahui, namun para ilmuwan percaya bahwa faktor genetik dan gaya hidup lingkungan berperan besar dalam terjadinya diabetes.</p>
+<hr class="docutils" />
+<p>Dataset CDC Diabetes Health Indicators berisi mengenai statistik kesehatan dan informasi survei gaya hidup orang-orang secara umum beserta diagnosis diabetes mereka. 22 fitur terdiri dari beberapa demografi, hasil tes laboratorium, dan jawaban atas pertanyaan survei untuk setiap pasien. Variabel target untuk klasifikasi adalah apakah pasien menderita diabetes atau sehat yang berada pada fitur Diabetes_binary.</p>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pycaret
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>dataprep
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Ignoring invalid distribution -atplotlib (/usr/local/lib/python3.10/dist-packages)</span>
+
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pycaret
+  Using cached pycaret-3.2.0-py3-none-any.whl (484 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting category-encoders&gt;=2.4.0 (from pycaret)
+  Using cached category_encoders-2.6.3-py2.py3-none-any.whl (81 kB)
+Requirement already satisfied: cloudpickle in /usr/local/lib/python3.10/dist-packages (from pycaret) (2.2.1)
+Requirement already satisfied: deprecation&gt;=2.1.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (2.1.0)
+Requirement already satisfied: imbalanced-learn&gt;=0.8.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.10.1)
+Requirement already satisfied: importlib-metadata&gt;=4.12.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (6.8.0)
+Requirement already satisfied: ipython&gt;=5.5.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (7.34.0)
+Requirement already satisfied: ipywidgets&gt;=7.6.5 in /usr/local/lib/python3.10/dist-packages (from pycaret) (7.7.1)
+Requirement already satisfied: jinja2&gt;=1.2 in /usr/local/lib/python3.10/dist-packages (from pycaret) (3.1.2)
+Requirement already satisfied: joblib&gt;=1.2.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.3.2)
+Requirement already satisfied: kaleido&gt;=0.2.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.2.1)
+Requirement already satisfied: lightgbm&gt;=3.0.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (4.1.0)
+Requirement already satisfied: markupsafe&gt;=2.0.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (2.1.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting matplotlib&lt;=3.6,&gt;=3.3.0 (from pycaret)
+  Using cached matplotlib-3.6.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.8 MB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nbformat&gt;=4.2.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (5.9.2)
+Requirement already satisfied: numba&gt;=0.55.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.58.1)
+Requirement already satisfied: numpy&lt;1.27,&gt;=1.21 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.23.5)
+Requirement already satisfied: pandas&lt;2.0.0,&gt;=1.3.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.5.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting plotly-resampler&gt;=0.8.3.1 (from pycaret)
+  Using cached plotly_resampler-0.9.1-py3-none-any.whl (73 kB)
+Requirement already satisfied: plotly&gt;=5.0.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (5.15.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pmdarima!=1.8.1,&lt;3.0.0,&gt;=1.8.0 (from pycaret)
+  Using cached pmdarima-2.0.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl (2.1 MB)
+Requirement already satisfied: psutil&gt;=5.9.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (5.9.5)
+Collecting pyod&gt;=1.0.8 (from pycaret)
+  Using cached pyod-1.1.2-py3-none-any.whl
+Requirement already satisfied: requests&gt;=2.27.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (2.31.0)
+Requirement already satisfied: schemdraw==0.15 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.15)
+Requirement already satisfied: scikit-learn&lt;1.3.0,&gt;=1.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.2.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting scikit-plot&gt;=0.3.7 (from pycaret)
+  Using cached scikit_plot-0.3.7-py3-none-any.whl (33 kB)
+Requirement already satisfied: scipy~=1.10.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.10.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting sktime!=0.17.1,!=0.17.2,!=0.18.0,&lt;0.22.0,&gt;=0.16.1 (from pycaret)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Using cached sktime-0.21.1-py3-none-any.whl (17.1 MB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: statsmodels&gt;=0.12.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.14.0)
+Collecting tbats&gt;=1.1.3 (from pycaret)
+  Using cached tbats-1.1.3-py3-none-any.whl (44 kB)
+Requirement already satisfied: tqdm&gt;=4.62.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (4.66.1)
+Requirement already satisfied: xxhash in /usr/local/lib/python3.10/dist-packages (from pycaret) (3.4.1)
+Requirement already satisfied: yellowbrick&gt;=1.4 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.5)
+Requirement already satisfied: wurlitzer in /usr/local/lib/python3.10/dist-packages (from pycaret) (3.0.3)
+Requirement already satisfied: patsy&gt;=0.5.1 in /usr/local/lib/python3.10/dist-packages (from category-encoders&gt;=2.4.0-&gt;pycaret) (0.5.3)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from deprecation&gt;=2.1.0-&gt;pycaret) (23.2)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from imbalanced-learn&gt;=0.8.1-&gt;pycaret) (3.2.0)
+Requirement already satisfied: zipp&gt;=0.5 in /usr/local/lib/python3.10/dist-packages (from importlib-metadata&gt;=4.12.0-&gt;pycaret) (3.17.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (67.7.2)
+Requirement already satisfied: jedi&gt;=0.16 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (0.19.1)
+Requirement already satisfied: decorator in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (4.4.2)
+Requirement already satisfied: pickleshare in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (0.7.5)
+Requirement already satisfied: traitlets&gt;=4.2 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (5.7.1)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (3.0.41)
+Requirement already satisfied: pygments in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (2.16.1)
+Requirement already satisfied: backcall in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (0.2.0)
+Requirement already satisfied: matplotlib-inline in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (0.1.6)
+Requirement already satisfied: pexpect&gt;4.3 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=5.5.0-&gt;pycaret) (4.8.0)
+Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.6.5-&gt;pycaret) (5.5.6)
+Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.6.5-&gt;pycaret) (0.2.0)
+Requirement already satisfied: widgetsnbextension~=3.6.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.6.5-&gt;pycaret) (3.6.6)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&gt;=7.6.5-&gt;pycaret) (3.0.9)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib&lt;=3.6,&gt;=3.3.0-&gt;pycaret) (1.2.0)
+Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib&lt;=3.6,&gt;=3.3.0-&gt;pycaret) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib&lt;=3.6,&gt;=3.3.0-&gt;pycaret) (4.44.3)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib&lt;=3.6,&gt;=3.3.0-&gt;pycaret) (1.4.5)
+Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib&lt;=3.6,&gt;=3.3.0-&gt;pycaret) (9.4.0)
+Requirement already satisfied: pyparsing&gt;=2.2.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib&lt;=3.6,&gt;=3.3.0-&gt;pycaret) (3.1.1)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib&lt;=3.6,&gt;=3.3.0-&gt;pycaret) (2.8.2)
+Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.10/dist-packages (from nbformat&gt;=4.2.0-&gt;pycaret) (2.19.0)
+Requirement already satisfied: jsonschema&gt;=2.6 in /usr/local/lib/python3.10/dist-packages (from nbformat&gt;=4.2.0-&gt;pycaret) (4.19.2)
+Requirement already satisfied: jupyter-core in /usr/local/lib/python3.10/dist-packages (from nbformat&gt;=4.2.0-&gt;pycaret) (5.5.0)
+Requirement already satisfied: llvmlite&lt;0.42,&gt;=0.41.0dev0 in /usr/local/lib/python3.10/dist-packages (from numba&gt;=0.55.0-&gt;pycaret) (0.41.1)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas&lt;2.0.0,&gt;=1.3.0-&gt;pycaret) (2023.3.post1)
+Requirement already satisfied: tenacity&gt;=6.2.0 in /usr/local/lib/python3.10/dist-packages (from plotly&gt;=5.0.0-&gt;pycaret) (8.2.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting dash&lt;3.0.0,&gt;=2.11.0 (from plotly-resampler&gt;=0.8.3.1-&gt;pycaret)
+  Using cached dash-2.14.1-py3-none-any.whl (10.4 MB)
+Requirement already satisfied: orjson&lt;4.0.0,&gt;=3.8.0 in /usr/local/lib/python3.10/dist-packages (from plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (3.9.10)
+Requirement already satisfied: trace-updater&gt;=0.0.8 in /usr/local/lib/python3.10/dist-packages (from plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (0.0.9.1)
+Requirement already satisfied: tsdownsample==0.1.2 in /usr/local/lib/python3.10/dist-packages (from plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (0.1.2)
+Requirement already satisfied: Cython!=0.29.18,!=0.29.31,&gt;=0.29 in /usr/local/lib/python3.10/dist-packages (from pmdarima!=1.8.1,&lt;3.0.0,&gt;=1.8.0-&gt;pycaret) (3.0.5)
+Requirement already satisfied: urllib3 in /usr/local/lib/python3.10/dist-packages (from pmdarima!=1.8.1,&lt;3.0.0,&gt;=1.8.0-&gt;pycaret) (2.0.7)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six in /usr/local/lib/python3.10/dist-packages (from pyod&gt;=1.0.8-&gt;pycaret) (1.16.0)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests&gt;=2.27.1-&gt;pycaret) (3.3.2)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests&gt;=2.27.1-&gt;pycaret) (3.4)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests&gt;=2.27.1-&gt;pycaret) (2023.7.22)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: deprecated&gt;=1.2.13 in /usr/local/lib/python3.10/dist-packages (from sktime!=0.17.1,!=0.17.2,!=0.18.0,&lt;0.22.0,&gt;=0.16.1-&gt;pycaret) (1.2.14)
+Requirement already satisfied: scikit-base&lt;0.6.0 in /usr/local/lib/python3.10/dist-packages (from sktime!=0.17.1,!=0.17.2,!=0.18.0,&lt;0.22.0,&gt;=0.16.1-&gt;pycaret) (0.5.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: Flask&lt;3.1,&gt;=1.0.4 in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (2.2.5)
+Requirement already satisfied: Werkzeug&lt;3.1 in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (3.0.1)
+Requirement already satisfied: dash-html-components==2.0.0 in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (2.0.0)
+Requirement already satisfied: dash-core-components==2.0.0 in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (2.0.0)
+Requirement already satisfied: dash-table==5.0.0 in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (5.0.0)
+Requirement already satisfied: typing-extensions&gt;=4.1.1 in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (4.5.0)
+Requirement already satisfied: retrying in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (1.3.4)
+Requirement already satisfied: ansi2html in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (1.8.0)
+Requirement already satisfied: nest-asyncio in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (1.5.8)
+Requirement already satisfied: wrapt&lt;2,&gt;=1.10 in /usr/local/lib/python3.10/dist-packages (from deprecated&gt;=1.2.13-&gt;sktime!=0.17.1,!=0.17.2,!=0.18.0,&lt;0.22.0,&gt;=0.16.1-&gt;pycaret) (1.14.1)
+Requirement already satisfied: jupyter-client in /usr/local/lib/python3.10/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (6.1.12)
+Requirement already satisfied: tornado&gt;=4.2 in /usr/local/lib/python3.10/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (6.3.2)
+Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.3 in /usr/local/lib/python3.10/dist-packages (from jedi&gt;=0.16-&gt;ipython&gt;=5.5.0-&gt;pycaret) (0.8.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: attrs&gt;=22.2.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;pycaret) (23.1.0)
+Requirement already satisfied: jsonschema-specifications&gt;=2023.03.6 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;pycaret) (2023.11.1)
+Requirement already satisfied: referencing&gt;=0.28.4 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;pycaret) (0.31.0)
+Requirement already satisfied: rpds-py&gt;=0.7.1 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;pycaret) (0.13.0)
+Requirement already satisfied: ptyprocess&gt;=0.5 in /usr/local/lib/python3.10/dist-packages (from pexpect&gt;4.3-&gt;ipython&gt;=5.5.0-&gt;pycaret) (0.7.0)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.10/dist-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython&gt;=5.5.0-&gt;pycaret) (0.2.10)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.10/dist-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (6.5.5)
+Requirement already satisfied: platformdirs&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from jupyter-core-&gt;nbformat&gt;=4.2.0-&gt;pycaret) (4.0.0)
+Requirement already satisfied: itsdangerous&gt;=2.0 in /usr/local/lib/python3.10/dist-packages (from Flask&lt;3.1,&gt;=1.0.4-&gt;dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (2.1.2)
+Requirement already satisfied: click&gt;=8.0 in /usr/local/lib/python3.10/dist-packages (from Flask&lt;3.1,&gt;=1.0.4-&gt;dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (8.1.7)
+Requirement already satisfied: pyzmq&lt;25,&gt;=17 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (23.2.1)
+Requirement already satisfied: argon2-cffi in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (23.1.0)
+Requirement already satisfied: nbconvert&gt;=5 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (6.5.4)
+Requirement already satisfied: Send2Trash&gt;=1.8.0 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.8.2)
+Requirement already satisfied: terminado&gt;=0.8.3 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.18.0)
+Requirement already satisfied: prometheus-client in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.18.0)
+Requirement already satisfied: nbclassic&gt;=0.4.7 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.0.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-server&gt;=1.8 in /usr/local/lib/python3.10/dist-packages (from nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.24.0)
+Requirement already satisfied: notebook-shim&gt;=0.2.3 in /usr/local/lib/python3.10/dist-packages (from nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.2.3)
+Requirement already satisfied: lxml in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (4.9.3)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (4.11.2)
+Requirement already satisfied: bleach in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (6.1.0)
+Requirement already satisfied: defusedxml in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.7.1)
+Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.4)
+Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.2.2)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.8.4)
+Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.7.4)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.5.0)
+Requirement already satisfied: tinycss2 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.2.1)
+Requirement already satisfied: argon2-cffi-bindings in /usr/local/lib/python3.10/dist-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (21.2.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: anyio&lt;4,&gt;=3.1.0 in /usr/local/lib/python3.10/dist-packages (from jupyter-server&gt;=1.8-&gt;nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (3.7.1)
+Requirement already satisfied: websocket-client in /usr/local/lib/python3.10/dist-packages (from jupyter-server&gt;=1.8-&gt;nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.6.4)
+Requirement already satisfied: cffi&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.16.0)
+Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4-&gt;nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (2.5)
+Requirement already satisfied: webencodings in /usr/local/lib/python3.10/dist-packages (from bleach-&gt;nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.5.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: sniffio&gt;=1.1 in /usr/local/lib/python3.10/dist-packages (from anyio&lt;4,&gt;=3.1.0-&gt;jupyter-server&gt;=1.8-&gt;nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.3.0)
+Requirement already satisfied: exceptiongroup in /usr/local/lib/python3.10/dist-packages (from anyio&lt;4,&gt;=3.1.0-&gt;jupyter-server&gt;=1.8-&gt;nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.1.3)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.10/dist-packages (from cffi&gt;=1.0.1-&gt;argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (2.21)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Ignoring invalid distribution -atplotlib (/usr/local/lib/python3.10/dist-packages)</span>
+
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: matplotlib, sktime, scikit-plot, pyod, dash, pmdarima, plotly-resampler, category-encoders, tbats, pycaret
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.</span>
+<span class=" -Color -Color-Red">lida 0.0.10 requires fastapi, which is not installed.</span>
+<span class=" -Color -Color-Red">lida 0.0.10 requires python-multipart, which is not installed.</span>
+<span class=" -Color -Color-Red">lida 0.0.10 requires uvicorn, which is not installed.</span>
+Successfully installed category-encoders-2.6.3 dash-2.14.1 matplotlib-3.6.0 plotly-resampler-0.9.1 pmdarima-2.0.4 pycaret-3.2.0 pyod-1.1.2 scikit-plot-0.3.7 sktime-0.21.1 tbats-1.1.3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Ignoring invalid distribution -atplotlib (/usr/local/lib/python3.10/dist-packages)</span>
+
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting dataprep
+  Using cached dataprep-0.4.5-py3-none-any.whl (9.9 MB)
+Requirement already satisfied: aiohttp&lt;4.0,&gt;=3.6 in /usr/local/lib/python3.10/dist-packages (from dataprep) (3.8.6)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting bokeh&lt;3,&gt;=2 (from dataprep)
+  Using cached bokeh-2.4.3-py3-none-any.whl (18.5 MB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: dask[array,dataframe,delayed]&gt;=2022.3.0 in /usr/local/lib/python3.10/dist-packages (from dataprep) (2023.8.1)
+Requirement already satisfied: flask&lt;3,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from dataprep) (2.2.5)
+Collecting flask_cors&lt;4.0.0,&gt;=3.0.10 (from dataprep)
+  Using cached Flask_Cors-3.0.10-py2.py3-none-any.whl (14 kB)
+Requirement already satisfied: ipywidgets&lt;8.0,&gt;=7.5 in /usr/local/lib/python3.10/dist-packages (from dataprep) (7.7.1)
+Collecting jinja2&lt;3.1,&gt;=3.0 (from dataprep)
+  Using cached Jinja2-3.0.3-py3-none-any.whl (133 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting jsonpath-ng&lt;2.0,&gt;=1.5 (from dataprep)
+  Using cached jsonpath_ng-1.6.0-py3-none-any.whl (29 kB)
+Collecting metaphone&lt;0.7,&gt;=0.6 (from dataprep)
+  Using cached Metaphone-0.6.tar.gz (14 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
+Requirement already satisfied: nltk&lt;4.0.0,&gt;=3.6.7 in /usr/local/lib/python3.10/dist-packages (from dataprep) (3.8.1)
+Requirement already satisfied: numpy&lt;2.0,&gt;=1.21 in /usr/local/lib/python3.10/dist-packages (from dataprep) (1.23.5)
+Requirement already satisfied: pandas&lt;2.0,&gt;=1.1 in /usr/local/lib/python3.10/dist-packages (from dataprep) (1.5.3)
+Requirement already satisfied: pydantic&lt;2.0,&gt;=1.6 in /usr/local/lib/python3.10/dist-packages (from dataprep) (1.10.13)
+Requirement already satisfied: pydot&lt;2.0.0,&gt;=1.4.2 in /usr/local/lib/python3.10/dist-packages (from dataprep) (1.4.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting python-crfsuite==0.9.8 (from dataprep)
+  Using cached python_crfsuite-0.9.8-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.0 MB)
+Collecting python-stdnum&lt;2.0,&gt;=1.16 (from dataprep)
+  Using cached python_stdnum-1.19-py2.py3-none-any.whl (1.0 MB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 169, in exc_logging_wrapper
+    status = run_func(*args)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/req_command.py&quot;, line 242, in wrapper
+    return func(self, options, args)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/commands/install.py&quot;, line 377, in run
+    requirement_set = resolver.resolve(
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/resolution/resolvelib/resolver.py&quot;, line 92, in resolve
+    result = self._result = resolver.resolve(
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/resolvelib/resolvers.py&quot;, line 546, in resolve
+    state = resolution.resolve(requirements, max_rounds=max_rounds)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/resolvelib/resolvers.py&quot;, line 427, in resolve
+    failure_causes = self._attempt_to_pin_criterion(name)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/resolvelib/resolvers.py&quot;, line 239, in _attempt_to_pin_criterion
+    criteria = self._get_updated_criteria(candidate)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/resolvelib/resolvers.py&quot;, line 230, in _get_updated_criteria
+    self._add_to_criteria(criteria, requirement, parent=candidate)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/resolvelib/resolvers.py&quot;, line 173, in _add_to_criteria
+    if not criterion.candidates:
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/resolvelib/structs.py&quot;, line 156, in __bool__
+    return bool(self._sequence)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/resolution/resolvelib/found_candidates.py&quot;, line 155, in __bool__
+    return any(self)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/resolution/resolvelib/found_candidates.py&quot;, line 143, in &lt;genexpr&gt;
+    return (c for c in iterator if id(c) not in self._incompatible_ids)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/resolution/resolvelib/found_candidates.py&quot;, line 44, in _iter_built
+    for version, func in infos:
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/resolution/resolvelib/factory.py&quot;, line 279, in iter_index_candidate_infos
+    result = self._finder.find_best_candidate(
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/index/package_finder.py&quot;, line 890, in find_best_candidate
+    candidates = self.find_all_candidates(project_name)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/index/package_finder.py&quot;, line 831, in find_all_candidates
+    page_candidates = list(page_candidates_it)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/index/sources.py&quot;, line 134, in page_candidates
+    yield from self._candidates_from_page(self._link)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/index/package_finder.py&quot;, line 798, in process_project_url
+    package_links = self.evaluate_links(
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/index/package_finder.py&quot;, line 778, in evaluate_links
+    candidate = self.get_install_candidate(link_evaluator, link)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/index/package_finder.py&quot;, line 759, in get_install_candidate
+    result, detail = link_evaluator.evaluate_link(link)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/index/package_finder.py&quot;, line 202, in evaluate_link
+    if not wheel.supported(supported_tags):
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/models/wheel.py&quot;, line 92, in supported
+    return not self.file_tags.isdisjoint(tags)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/packaging/tags.py&quot;, line 86, in __hash__
+    def __hash__(self) -&gt; int:
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;/usr/local/bin/pip3&quot;, line 8, in &lt;module&gt;
+    sys.exit(main())
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/main.py&quot;, line 79, in main
+    return command.main(cmd_args)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 101, in main
+    return self._main(args)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 223, in _main
+    return run(options, args)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 206, in exc_logging_wrapper
+    logger.critical(&quot;Operation cancelled by user&quot;)
+  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1524, in critical
+    self._log(CRITICAL, msg, args, **kwargs)
+  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1624, in _log
+    self.handle(record)
+  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1634, in handle
+    self.callHandlers(record)
+  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1696, in callHandlers
+    hdlr.handle(record)
+  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 968, in handle
+    self.emit(record)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/utils/logging.py&quot;, line 177, in emit
+    self.console.print(renderable, overflow=&quot;ignore&quot;, crop=False, style=style)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/console.py&quot;, line 1683, in print
+    render_options = self.options.update(
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/console.py&quot;, line 980, in options
+    return ConsoleOptions(
+KeyboardInterrupt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn-darkgrid&#39;</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">LinearSVC</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">LinearSVC</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span><span class="n">precision_score</span><span class="p">,</span> <span class="n">f1_score</span><span class="p">,</span> <span class="n">confusion_matrix</span>
+<span class="kn">from</span> <span class="nn">imblearn.over_sampling</span> <span class="kn">import</span> <span class="n">SMOTE</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+<span class="kn">from</span> <span class="nn">dataprep.eda</span> <span class="kn">import</span> <span class="n">plot_missing</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-13-600ec31c78f3&gt;:7: MatplotlibDeprecationWarning: The seaborn styles shipped by Matplotlib are deprecated since 3.6, as they no longer correspond to the styles shipped by seaborn. However, they will remain available as &#39;seaborn-v0_8-&lt;style&gt;&#39;. Alternatively, directly use the seaborn API instead.
+  plt.style.use(&#39;seaborn-darkgrid&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">mutual_info_classif</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">SelectKBest</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Pindah ke direktori yang sesuai di Google Drive</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/PSD/Diabetes Indicator/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(&quot;/content/drive&quot;, force_remount=True).
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="data-understanding">
+<h1><strong>Data Understanding</strong><a class="headerlink" href="#data-understanding" title="Permalink to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="penjelasan-fitur">
+<h1><strong>Penjelasan Fitur</strong><a class="headerlink" href="#penjelasan-fitur" title="Permalink to this heading">#</a></h1>
+<p><strong>1.   Diabetes_binary</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0 = no diabetes 1 =  diabetes(kategorikal)
+</pre></div>
+</div>
+<p><strong>2.   HighBP</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0 = no high BP 1 = high BP(kategorikal)
+
+High Blood Pressure(Tekanan Darah Tinggi) = Apakah tekanan darah pasien termasuk tinggi atau tidak?
+
+Tekanan darah adalah ukuran tekanan yang dihasilkan oleh aliran darah saat mengalir melalui pembuluh darah dalam tubuh.
+</pre></div>
+</div>
+<p><strong>3. HighChol</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0 = no high cholesterol 1 = high cholesterol(kategorikal)
+
+High Cholesterol = Apakah kolesterol pasien termasuk tinggi atau tidak
+
+Kolesterol adalah suatu jenis lemak yang ditemukan dalam tubuh manusia dan hewan.
+Ini adalah komponen penting dari membran sel dan berperan dalam berbagai fungsi biologis.
+Kolesterol adalah senyawa lipid yang memiliki struktur kimia khusus yang dikenal sebagai sterol.
+</pre></div>
+</div>
+<p><strong>4. CholCheck</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0 = no cholesterol check in 5 years 1 = yes cholesterol check in 5 years(kategorikal)
+
+Cholesterol Check = Apakah kolesterol di cek dalam 5 tahun terakhir atau tidak
+</pre></div>
+</div>
+<p><strong>5. BMI</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Body Mass Index = Berat badan pasien(Numerik)
+</pre></div>
+</div>
+<p><strong>6. Smoker</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Apakah Anda merokok setidaknya 100 batang seumur hidup Anda?
+0 = no 1 = yes(kategorikal)
+</pre></div>
+</div>
+<p><strong>7. Stroke</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(Pernah diberitahu) Anda terkena stroke?.
+0 = no 1 = yes(kategorikal)
+</pre></div>
+</div>
+<p><strong>8. HeartDiseaseorAttack</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>coronary heart disease (CHD) or myocardial infarction (MI)
+Apakah anda memiliki penyakit jantung?
+0 = no 1 = yes(kategorikal)
+---
+Coronary Artery Disease (CAD)(yaitu, jantung koroner) merupakan suatu gangguan fungsi jantung
+yang disebabkan karena otot miokard kekurangan suplai darah
+akibat adanya penyempitan arteri koroner dan tersumbatnya pembuluh darah jantung.
+Jika Anda tidak tahu apakah memiliki penyakit jantung koroner,
+maka Anda dapat melakukan tes kesehatan untuk mengetahui apakah Anda menderita penyakit jantung koroner.
+---
+myocardial infarction (MI)(yaitu, serangan jantung) adalah
+kematian permanen (nekrosis) otot jantung akibat kekurangan pasokan oksigen (iskemia) yang berkepanjangan.
+Jika Anda tidak tahu apakah memiliki penyakit serangan jantung,
+maka Anda dapat melakukan tes kesehatan untuk mengetahui apakah Anda menderita penyakit serangan jantung.
+</pre></div>
+</div>
+<p><strong>9. PhysActivity</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Apakah anda memiliki aktivitas fisik dalam 30 hari terakhir?(tidak termasuk kerja)
+0 = no 1 = yes(kategorikal)
+</pre></div>
+</div>
+<p><strong>10. Fruits</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Apakah Anda Mengonsumsi Buah 1 kali atau lebih dalam sehari?
+0 = no 1 = yes(kategorikal)
+</pre></div>
+</div>
+<p><strong>11. Veggies</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Apakah Anda Mengkonsumsi Sayuran 1 kali atau lebih per hari?
+0 = no 1 = yes(kategorikal)
+</pre></div>
+</div>
+<p><strong>12. HvyAlcoholConsump</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Apakah anda merupakan pemabuk berat
+(jika pria dewasa lebih dari 14 gelas per minggu dan wanita dewasa lebih dari 7 gelas per minggu) ?
+0 = no 1 = yes(kategorikal)
+</pre></div>
+</div>
+<p><strong>13. AnyHealthcare</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Memiliki jaminan perawatan kesehatan apa pun, termasuk asuransi kesehatan, paket prabayar seperti HMO, dll?
+0 = no 1 = yes(kategorikal)
+</pre></div>
+</div>
+<p><strong>14. NoDocbcCost</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Apakah dalam 12 bulan terakhir ada saat di mana Anda perlu ke dokter tetapi tidak bisa karena biaya?
+0 = no 1 = yes(kategorikal)
+</pre></div>
+</div>
+<p><strong>15. GenHlth</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Menurut Anda, secara umum kesehatan Anda adalah: dalam skala 1-5
+1 = excellent 2 = very good 3 = good 4 = fair 5 = poor(kategorikal)
+</pre></div>
+</div>
+<p><strong>16. MentHlth</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Sekarang coba pikirkan tentang kesehatan mental Anda, yang meliputi
+stres, depresi, dan masalah dengan emosi,
+selama berapa hari dalam 30 hari terakhir kesehatan mental Anda tidak baik?
+dalam skala 1-30 hari
+</pre></div>
+</div>
+<p><strong>17. PhysHlth</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Sekarang pikirkan tentang kesehatan fisik Anda, yang mencakup penyakit fisik dan cedera,
+selama berapa hari dalam 30 hari terakhir kesehatan fisik Anda tidak baik?
+dalam skala 1-30 hari
+</pre></div>
+</div>
+<p><strong>18. DiffWalk</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Apakah Anda mengalami kesulitan saat berjalan atau menaiki tangga?
+0 = no 1 = yes(kategorikal)
+</pre></div>
+</div>
+<p><strong>19. Sex</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0 = female 1 = male(kategorikal)
+</pre></div>
+</div>
+<p><strong>20. Age</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>13-level Umur category(Kategorikal)
+1 = Umur 18 sampai 24
+2 = Umur 25 sampai 29
+3 = Umur 30 sampai 34
+4 = Umur 35 sampai 39
+5 = Umur 40 sampai 44
+6 = Umur 45 sampai 49
+7 = Umur 50 sampai 54
+8 = Umur 55 sampai 59
+9 = Umur 60 sampai 64
+10 = Umur 65 sampai 69
+11 = Umur 70 sampai 74
+12 = Umur 75 sampai 79
+13 = Umur 80 atau lebih tua
+</pre></div>
+</div>
+<p><strong>21. Education</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Tingkat pendidikan skala 1-6 (kategorikal)
+1 = Tidak pernah bersekolah atau hanya taman kanak-kanak
+2 = Kelas 1 sampai 8 (SD)
+3 = Kelas 9 hingga 11 (Beberapa sekolah menengah)
+4 = Kelas 12 atau GED (Lulusan sekolah menengah atas)
+5 = Kuliah 1 tahun hingga 3 tahun (Beberapa perguruan tinggi atau sekolah teknik)
+6 = Perguruan tinggi 4 tahun atau lebih (Lulusan perguruan tinggi)
+</pre></div>
+</div>
+<p><strong>22. Income</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Skala pendapatan skala 1-8 (kategorikal)
+1 Kurang dari $10.000 (kurang dari Rp. 10.000.000,-)
+2 Kurang dari $15.000 ($10.000 hingga kurang dari $15.000)
+3 Kurang dari $20.000 ($15.000 hingga kurang dari $20.000)
+4 Kurang dari $25.000 ($20.000 hingga kurang dari $25.000)
+5 Kurang dari $35.000 ($25.000 hingga kurang dari $35.000)
+6 Kurang dari $50.000 ($35.000 hingga kurang dari $50.000)
+7 Kurang dari $75.000 ($50.000 hingga kurang dari $75.000)
+8 $75.000 atau lebih
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diabet</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/PSD/Diabetes Indicator/diabetes_binary_health_indicators_BRFSS2015.csv&#39;</span><span class="p">)</span>
+<span class="n">diabet</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-87a31ecb-4dee-4538-af38-25e90dbd8418" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Diabetes_binary</th>
+      <th>HighBP</th>
+      <th>HighChol</th>
+      <th>CholCheck</th>
+      <th>BMI</th>
+      <th>Smoker</th>
+      <th>Stroke</th>
+      <th>HeartDiseaseorAttack</th>
+      <th>PhysActivity</th>
+      <th>Fruits</th>
+      <th>...</th>
+      <th>AnyHealthcare</th>
+      <th>NoDocbcCost</th>
+      <th>GenHlth</th>
+      <th>MentHlth</th>
+      <th>PhysHlth</th>
+      <th>DiffWalk</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>Education</th>
+      <th>Income</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>40.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>18.0</td>
+      <td>15.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>9.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>25.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>6.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>28.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>5.0</td>
+      <td>30.0</td>
+      <td>30.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>9.0</td>
+      <td>4.0</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>27.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>11.0</td>
+      <td>3.0</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>24.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>11.0</td>
+      <td>5.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>253675</th>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>45.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>5.0</td>
+      <td>6.0</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>253676</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>18.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>11.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>253677</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>28.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>5.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>253678</th>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>23.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>7.0</td>
+      <td>5.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>253679</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>25.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>9.0</td>
+      <td>6.0</td>
+      <td>2.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>253680 rows × 22 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-87a31ecb-4dee-4538-af38-25e90dbd8418')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-87a31ecb-4dee-4538-af38-25e90dbd8418 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-87a31ecb-4dee-4538-af38-25e90dbd8418');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-bff94f4e-d401-4de0-b529-cffe0b3819a3">
+  <button class="colab-df-quickchart" onclick="quickchart('df-bff94f4e-d401-4de0-b529-cffe0b3819a3')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-bff94f4e-d401-4de0-b529-cffe0b3819a3 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+<p><strong>Pengecekan Missing Value</strong></p>
+<p>Pengecekan missing value pada dataset, pengecekan dilakukan karena hal ini akan berpengaruh terhadap analisa dan performansi model machine learning jika data-data tersebut dijadikan “modal” dalam membuat suatu model Machine Learning.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  data understanding</span>
+<span class="n">plot_missing</span><span class="p">(</span><span class="n">diabet</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Output hidden; open in https://colab.research.google.com to view.
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Melihat Ada Berapa Kelas Dalam Data</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IsDiabet</span> <span class="o">=</span> <span class="n">diabet</span><span class="p">[</span><span class="s1">&#39;Diabetes_binary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Jumlah Kelas :&#39;</span><span class="p">,</span><span class="n">IsDiabet</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah Kelas : [0. 1.]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Pengecekan Data Setiap Kelas</strong></p>
+<p>Mengecek data pada setiap kelas yaitu data pasien yang terkena diabetes dan data pasien yang tidak terkena diabetes. Untuk mengetahui apakah data antara 2 kelas tersebut seimbang atau tidak, karena data yang tidak seimbang dapat mempengaruhi akurasi dari klasifikasi.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jumlah_diabet</span> <span class="o">=</span> <span class="n">diabet</span><span class="p">[</span><span class="s1">&#39;Diabetes_binary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">jumlah_nondiabet</span> <span class="o">=</span> <span class="n">diabet</span><span class="p">[</span><span class="s1">&#39;Diabetes_binary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Jumlah pasien diabet : &#39;</span><span class="p">,</span><span class="n">jumlah_diabet</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Jumlah pasien non-diabet : &#39;</span><span class="p">,</span><span class="n">jumlah_nondiabet</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah pasien diabet :  35346
+Jumlah pasien non-diabet :  218334
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="pre-processing">
+<h1><strong>Pre-Processing</strong><a class="headerlink" href="#pre-processing" title="Permalink to this heading">#</a></h1>
+<p><strong>SMOTE (Synthetic Minority Over-sampling Technique) :</strong></p>
+<p>Kegunaan utama dari library atau algoritma SMOTE adalah untuk mengatasi masalah ketidakseimbangan kelas dalam dataset. Masalah ketidakseimbangan kelas terjadi ketika ada perbedaan yang signifikan dalam jumlah sampel antara kelas mayoritas dan kelas minoritas dalam dataset. seperti jika data pasien diabetes lebih banyak dari non-diabetes.<strong>Metode SMOTE bekerja dengan mencari k nearest neighbors untuk setiap data di kelas minoritas, setelah itu dibuat data sintetis sebanyak persentase duplikasi yang diinginkan antara data minor dan knearest neighbors yang dipilih secara acak</strong>. berikut merupakan rumus manual dari SMOTE (Synthetic Minority Over-sampling Technique :</p>
+<p><span class="math notranslate nohighlight">\(\text{SMOTE} : (X_{new} - X_{min}) = \lambda \cdot (X - X_{min}) \)</span></p>
+<p>Di mana:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( X_{new} \)</span> adalah sampel sintetis yang dihasilkan.</p></li>
+<li><p><span class="math notranslate nohighlight">\( X_{min} \)</span> adalah sampel dari kelas minoritas yang sedang diproses.</p></li>
+<li><p><span class="math notranslate nohighlight">\( X \)</span> adalah salah satu dari k-nearest neighbors dari <span class="math notranslate nohighlight">\( X_{min} \)</span> yang berbeda dari <span class="math notranslate nohighlight">\( X_{min} \)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\( \lambda \)</span> adalah suatu bilangan acak antara 0 dan 1.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">diabet</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Diabetes_binary&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">diabet</span><span class="p">[</span><span class="s1">&#39;Diabetes_binary&#39;</span><span class="p">]</span>
+<span class="n">feature_names</span> <span class="o">=</span> <span class="n">diabet</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">oversample</span> <span class="o">=</span> <span class="n">SMOTE</span><span class="p">()</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">oversample</span><span class="o">.</span><span class="n">fit_resample</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">feature_names</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Diabetes_binary&#39;, &#39;HighBP&#39;, &#39;HighChol&#39;, &#39;CholCheck&#39;, &#39;BMI&#39;, &#39;Smoker&#39;,
+       &#39;Stroke&#39;, &#39;HeartDiseaseorAttack&#39;, &#39;PhysActivity&#39;, &#39;Fruits&#39;, &#39;Veggies&#39;,
+       &#39;HvyAlcoholConsump&#39;, &#39;AnyHealthcare&#39;, &#39;NoDocbcCost&#39;, &#39;GenHlth&#39;,
+       &#39;MentHlth&#39;, &#39;PhysHlth&#39;, &#39;DiffWalk&#39;, &#39;Sex&#39;, &#39;Age&#39;, &#39;Education&#39;,
+       &#39;Income&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Information Gain :</strong></p>
+<p>Information Gain adalah salah satu metode penyeleksian fitur, yang menyeleksi dengan cara mengukur peningkatan dalam ketidakpastian (entropi) dari dataset yang disebabkan oleh pengetahuan tentang suatu fitur. Semakin besar peningkatannya, semakin informatif fitur tersebut terhadap pemisahan atau klasifikasi data. berikut merupakan rumus manual dari Information Gain :</p>
+<p><span class="math notranslate nohighlight">\(
+ \text{Information Gain} = H(D) - H(D|A)
+\)</span></p>
+<p>Di mana :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( H(D) \)</span> adalah entropi dataset sebelum informasi tambahan dari fitur <span class="math notranslate nohighlight">\( A \)</span> digunakan</p></li>
+<li><p><span class="math notranslate nohighlight">\( H(D|A) \)</span> adalah entropi dataset setelah fitur <span class="math notranslate nohighlight">\( A \)</span> digunakan untuk pemisahan atau klasifikasi.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Seleksi fitur menggunakan Information Gain</span>
+<span class="n">selector</span> <span class="o">=</span> <span class="n">SelectKBest</span><span class="p">(</span><span class="n">score_func</span><span class="o">=</span><span class="n">mutual_info_classif</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span> <span class="c1">#k = all berfungsi untuk menghitung semua fitur dengan information gain</span>
+<span class="n">X_new</span> <span class="o">=</span> <span class="n">selector</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Mengambil indeks fitur yang terpilih</span>
+<span class="n">selected_features</span> <span class="o">=</span> <span class="n">selector</span><span class="o">.</span><span class="n">get_support</span><span class="p">(</span><span class="n">indices</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Hasil seleksi fitur beserta nama fitur dan pentingnya</span>
+<span class="n">feature_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">feature_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">selected_features</span><span class="p">]</span>
+<span class="n">feature_scores</span> <span class="o">=</span> <span class="n">selector</span><span class="o">.</span><span class="n">scores_</span>
+
+<span class="c1"># Membuat DataFrame untuk menampung nama fitur dan nilainya dalam satu frame</span>
+<span class="n">feature_info_gain_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Fitur&#39;</span><span class="p">:</span> <span class="n">feature_names</span><span class="p">,</span> <span class="s1">&#39;Information Gain&#39;</span><span class="p">:</span> <span class="n">feature_scores</span><span class="p">})</span>
+
+<span class="c1"># Menampilkan fitur-fitur secara berurutan berdasarkan Information Gain yang terbesar</span>
+<span class="n">sorted_features</span> <span class="o">=</span> <span class="n">feature_info_gain_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Information Gain&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sorted_features</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                   Fitur  Information Gain
+13           NoDocbcCost          0.214620
+18                   Sex          0.210766
+3              CholCheck          0.210239
+0        Diabetes_binary          0.200825
+1                 HighBP          0.167216
+20             Education          0.165133
+19                   Age          0.151587
+7   HeartDiseaseorAttack          0.128163
+8           PhysActivity          0.124682
+4                    BMI          0.120320
+9                 Fruits          0.112200
+17              DiffWalk          0.109034
+16              PhysHlth          0.096620
+15              MentHlth          0.087826
+11     HvyAlcoholConsump          0.073129
+6                 Stroke          0.071450
+14               GenHlth          0.056744
+2               HighChol          0.056621
+12         AnyHealthcare          0.041062
+5                 Smoker          0.034518
+10               Veggies          0.022357
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Standard Scaler</strong></p>
+<p>Standart Scaler adalah bagian dari scikit-learn (sklearn) dan digunakan untuk melakukan normalisasi fitur dalam data Anda. Standart Scaler mengubah distribusi nilai fitur sehingga memiliki rata-rata (mean) nol dan deviasi standar (standard deviation) satu. Ini berarti data fitur akan memiliki nilai tengah yang sama (nol) dan tersebar dengan baik dengan deviasi standar yang seragam, yang membantu algoritma machine learning yang sensitif terhadap skala berkinerja lebih baik. berikut merupakan rumus manual dari standard scaler :</p>
+<div class="math notranslate nohighlight">
+\[
+\text{StandardScaler: } Z = \frac{X - \mu}{\sigma}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">diabet</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Diabetes_binary&#39;</span><span class="p">,</span><span class="s1">&#39;AnyHealthcare&#39;</span><span class="p">,</span><span class="s1">&#39;Smoker&#39;</span><span class="p">,</span> <span class="s1">&#39;Veggies&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">diabet</span><span class="p">[</span><span class="s1">&#39;Diabetes_binary&#39;</span><span class="p">]</span>
+<span class="n">oversample</span> <span class="o">=</span> <span class="n">SMOTE</span><span class="p">()</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">oversample</span><span class="o">.</span><span class="n">fit_resample</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Splitting data into training and test set:</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Creating StandardScaler instance</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="c1"># Fitting Standard Scaller</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;StandardScaler.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+<span class="c1"># Scaling data</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="modelling">
+<h1><strong>Modelling</strong><a class="headerlink" href="#modelling" title="Permalink to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="pycaret">
+<h1><strong>PyCaret</strong><a class="headerlink" href="#pycaret" title="Permalink to this heading">#</a></h1>
+<p>Library PyCaret adalah kumpulan library open source yang digunakan untuk membangun model machine learning dengan mudah. PyCaret menyediakan tools untuk preprocessing data, membangun model, membandingkan model, mengevaluasi, menampilkan visualisasi hasil training sampai menyimpan model dalam
+format tertentu. PyCaret memungkinkan untuk menguji banyak model secara mudah dan cepat. Maka dari itu dalam proses untuk mendapatkan model terbaik, penelitian ini menggunakan library PyCaret.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pycaret.datasets</span> <span class="kn">import</span> <span class="n">get_data</span>
+<span class="kn">from</span> <span class="nn">pycaret.classification</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Melakukan setup data untuk proses modeling dengan menggunakan parameter diabet sebagai dataset yang akan digunakan dan target.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">setup</span><span class="p">(</span><span class="n">diabet</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Diabetes_binary&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_cb258_row8_col1 {
+  background-color: lightgreen;
+}
+</style>
+<table id="T_cb258" class="dataframe">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_cb258_level0_col0" class="col_heading level0 col0" >Description</th>
+      <th id="T_cb258_level0_col1" class="col_heading level0 col1" >Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_cb258_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_cb258_row0_col0" class="data row0 col0" >Session id</td>
+      <td id="T_cb258_row0_col1" class="data row0 col1" >1799</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_cb258_row1_col0" class="data row1 col0" >Target</td>
+      <td id="T_cb258_row1_col1" class="data row1 col1" >Diabetes_binary</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_cb258_row2_col0" class="data row2 col0" >Target type</td>
+      <td id="T_cb258_row2_col1" class="data row2 col1" >Binary</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_cb258_row3_col0" class="data row3 col0" >Original data shape</td>
+      <td id="T_cb258_row3_col1" class="data row3 col1" >(253680, 22)</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_cb258_row4_col0" class="data row4 col0" >Transformed data shape</td>
+      <td id="T_cb258_row4_col1" class="data row4 col1" >(253680, 22)</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row5" class="row_heading level0 row5" >5</th>
+      <td id="T_cb258_row5_col0" class="data row5 col0" >Transformed train set shape</td>
+      <td id="T_cb258_row5_col1" class="data row5 col1" >(177576, 22)</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row6" class="row_heading level0 row6" >6</th>
+      <td id="T_cb258_row6_col0" class="data row6 col0" >Transformed test set shape</td>
+      <td id="T_cb258_row6_col1" class="data row6 col1" >(76104, 22)</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row7" class="row_heading level0 row7" >7</th>
+      <td id="T_cb258_row7_col0" class="data row7 col0" >Numeric features</td>
+      <td id="T_cb258_row7_col1" class="data row7 col1" >21</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row8" class="row_heading level0 row8" >8</th>
+      <td id="T_cb258_row8_col0" class="data row8 col0" >Preprocess</td>
+      <td id="T_cb258_row8_col1" class="data row8 col1" >True</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row9" class="row_heading level0 row9" >9</th>
+      <td id="T_cb258_row9_col0" class="data row9 col0" >Imputation type</td>
+      <td id="T_cb258_row9_col1" class="data row9 col1" >simple</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row10" class="row_heading level0 row10" >10</th>
+      <td id="T_cb258_row10_col0" class="data row10 col0" >Numeric imputation</td>
+      <td id="T_cb258_row10_col1" class="data row10 col1" >mean</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row11" class="row_heading level0 row11" >11</th>
+      <td id="T_cb258_row11_col0" class="data row11 col0" >Categorical imputation</td>
+      <td id="T_cb258_row11_col1" class="data row11 col1" >mode</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row12" class="row_heading level0 row12" >12</th>
+      <td id="T_cb258_row12_col0" class="data row12 col0" >Fold Generator</td>
+      <td id="T_cb258_row12_col1" class="data row12 col1" >StratifiedKFold</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row13" class="row_heading level0 row13" >13</th>
+      <td id="T_cb258_row13_col0" class="data row13 col0" >Fold Number</td>
+      <td id="T_cb258_row13_col1" class="data row13 col1" >10</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row14" class="row_heading level0 row14" >14</th>
+      <td id="T_cb258_row14_col0" class="data row14 col0" >CPU Jobs</td>
+      <td id="T_cb258_row14_col1" class="data row14 col1" >-1</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row15" class="row_heading level0 row15" >15</th>
+      <td id="T_cb258_row15_col0" class="data row15 col0" >Use GPU</td>
+      <td id="T_cb258_row15_col1" class="data row15 col1" >False</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row16" class="row_heading level0 row16" >16</th>
+      <td id="T_cb258_row16_col0" class="data row16 col0" >Log Experiment</td>
+      <td id="T_cb258_row16_col1" class="data row16 col1" >False</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row17" class="row_heading level0 row17" >17</th>
+      <td id="T_cb258_row17_col0" class="data row17 col0" >Experiment Name</td>
+      <td id="T_cb258_row17_col1" class="data row17 col1" >clf-default-name</td>
+    </tr>
+    <tr>
+      <th id="T_cb258_level0_row18" class="row_heading level0 row18" >18</th>
+      <td id="T_cb258_row18_col0" class="data row18 col0" >USI</td>
+      <td id="T_cb258_row18_col1" class="data row18 col1" >b229</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p><strong>Compare Models</strong></p>
+<p>Pada library PyCaret terdapat sekitar 16 algoritma klasifikasi yang tersedia untuk proses perbandingan metode. Algoritma klasifikasi tersebut antara lain Logistic Regression, K Neighbors Classifier, Decision Tree Classifier, Quadratic
+Discriminant Analysis, Linear Discriminant Analysis, Light Gradient Boosting Machine, Gradient Boosting Classifier, Naive Bayes, Extra Trees Classifier, CatBoost Classifier, Extreme Gradient Boosting, Random Forest Classifier,
+AdaBoost Classifier, Ridge Classifier, SVM - Linear Kernel, dan Dummy Classifier. Dari beberapa metode tersebut, akan dilakukan perbandingan atau komparasi dengan menggunakan fungsi compare_models(). Fungsi ini berguna untuk melatih dan mengevaluasi performa model algoritma klasifikasi dengan menggunakan cross validation. Keluaran dari fungsi ini adalah rata-rata skor dari cross validation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">best</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">compare_models</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"></div><div class="output text_html"><style type="text/css">
+#T_e6f75 th {
+  text-align: left;
+}
+#T_e6f75_row0_col0, #T_e6f75_row0_col3, #T_e6f75_row0_col4, #T_e6f75_row0_col5, #T_e6f75_row0_col6, #T_e6f75_row0_col7, #T_e6f75_row1_col0, #T_e6f75_row1_col1, #T_e6f75_row1_col3, #T_e6f75_row1_col4, #T_e6f75_row1_col5, #T_e6f75_row1_col6, #T_e6f75_row1_col7, #T_e6f75_row2_col0, #T_e6f75_row2_col1, #T_e6f75_row2_col2, #T_e6f75_row2_col3, #T_e6f75_row2_col4, #T_e6f75_row2_col5, #T_e6f75_row2_col6, #T_e6f75_row2_col7, #T_e6f75_row3_col0, #T_e6f75_row3_col1, #T_e6f75_row3_col2, #T_e6f75_row3_col3, #T_e6f75_row3_col4, #T_e6f75_row3_col5, #T_e6f75_row3_col6, #T_e6f75_row3_col7, #T_e6f75_row4_col0, #T_e6f75_row4_col1, #T_e6f75_row4_col2, #T_e6f75_row4_col3, #T_e6f75_row4_col4, #T_e6f75_row4_col5, #T_e6f75_row4_col6, #T_e6f75_row4_col7, #T_e6f75_row5_col0, #T_e6f75_row5_col1, #T_e6f75_row5_col2, #T_e6f75_row5_col3, #T_e6f75_row5_col5, #T_e6f75_row5_col6, #T_e6f75_row5_col7, #T_e6f75_row6_col0, #T_e6f75_row6_col1, #T_e6f75_row6_col2, #T_e6f75_row6_col3, #T_e6f75_row6_col4, #T_e6f75_row6_col5, #T_e6f75_row6_col6, #T_e6f75_row6_col7, #T_e6f75_row7_col0, #T_e6f75_row7_col1, #T_e6f75_row7_col2, #T_e6f75_row7_col3, #T_e6f75_row7_col4, #T_e6f75_row7_col5, #T_e6f75_row7_col6, #T_e6f75_row7_col7, #T_e6f75_row8_col0, #T_e6f75_row8_col1, #T_e6f75_row8_col2, #T_e6f75_row8_col3, #T_e6f75_row8_col4, #T_e6f75_row8_col5, #T_e6f75_row8_col6, #T_e6f75_row8_col7, #T_e6f75_row9_col0, #T_e6f75_row9_col1, #T_e6f75_row9_col2, #T_e6f75_row9_col3, #T_e6f75_row9_col4, #T_e6f75_row9_col5, #T_e6f75_row9_col6, #T_e6f75_row9_col7, #T_e6f75_row10_col0, #T_e6f75_row10_col1, #T_e6f75_row10_col2, #T_e6f75_row10_col3, #T_e6f75_row10_col4, #T_e6f75_row10_col5, #T_e6f75_row10_col6, #T_e6f75_row10_col7, #T_e6f75_row11_col0, #T_e6f75_row11_col1, #T_e6f75_row11_col2, #T_e6f75_row11_col3, #T_e6f75_row11_col4, #T_e6f75_row11_col5, #T_e6f75_row11_col6, #T_e6f75_row11_col7, #T_e6f75_row12_col0, #T_e6f75_row12_col1, #T_e6f75_row12_col2, #T_e6f75_row12_col3, #T_e6f75_row12_col4, #T_e6f75_row12_col5, #T_e6f75_row12_col6, #T_e6f75_row12_col7, #T_e6f75_row13_col0, #T_e6f75_row13_col1, #T_e6f75_row13_col2, #T_e6f75_row13_col4, #T_e6f75_row14_col0, #T_e6f75_row14_col1, #T_e6f75_row14_col2, #T_e6f75_row14_col3, #T_e6f75_row14_col4, #T_e6f75_row14_col5, #T_e6f75_row14_col6, #T_e6f75_row14_col7 {
+  text-align: left;
+}
+#T_e6f75_row0_col1, #T_e6f75_row0_col2, #T_e6f75_row1_col2, #T_e6f75_row5_col4, #T_e6f75_row13_col3, #T_e6f75_row13_col5, #T_e6f75_row13_col6, #T_e6f75_row13_col7 {
+  text-align: left;
+  background-color: yellow;
+}
+#T_e6f75_row0_col8, #T_e6f75_row1_col8, #T_e6f75_row2_col8, #T_e6f75_row3_col8, #T_e6f75_row4_col8, #T_e6f75_row5_col8, #T_e6f75_row6_col8, #T_e6f75_row8_col8, #T_e6f75_row9_col8, #T_e6f75_row10_col8, #T_e6f75_row11_col8, #T_e6f75_row12_col8, #T_e6f75_row13_col8, #T_e6f75_row14_col8 {
+  text-align: left;
+  background-color: lightgrey;
+}
+#T_e6f75_row7_col8 {
+  text-align: left;
+  background-color: yellow;
+  background-color: lightgrey;
+}
+</style>
+<table id="T_e6f75" class="dataframe">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_e6f75_level0_col0" class="col_heading level0 col0" >Model</th>
+      <th id="T_e6f75_level0_col1" class="col_heading level0 col1" >Accuracy</th>
+      <th id="T_e6f75_level0_col2" class="col_heading level0 col2" >AUC</th>
+      <th id="T_e6f75_level0_col3" class="col_heading level0 col3" >Recall</th>
+      <th id="T_e6f75_level0_col4" class="col_heading level0 col4" >Prec.</th>
+      <th id="T_e6f75_level0_col5" class="col_heading level0 col5" >F1</th>
+      <th id="T_e6f75_level0_col6" class="col_heading level0 col6" >Kappa</th>
+      <th id="T_e6f75_level0_col7" class="col_heading level0 col7" >MCC</th>
+      <th id="T_e6f75_level0_col8" class="col_heading level0 col8" >TT (Sec)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_e6f75_level0_row0" class="row_heading level0 row0" >lightgbm</th>
+      <td id="T_e6f75_row0_col0" class="data row0 col0" >Light Gradient Boosting Machine</td>
+      <td id="T_e6f75_row0_col1" class="data row0 col1" >0.8668</td>
+      <td id="T_e6f75_row0_col2" class="data row0 col2" >0.8301</td>
+      <td id="T_e6f75_row0_col3" class="data row0 col3" >0.1633</td>
+      <td id="T_e6f75_row0_col4" class="data row0 col4" >0.5788</td>
+      <td id="T_e6f75_row0_col5" class="data row0 col5" >0.2546</td>
+      <td id="T_e6f75_row0_col6" class="data row0 col6" >0.2059</td>
+      <td id="T_e6f75_row0_col7" class="data row0 col7" >0.2566</td>
+      <td id="T_e6f75_row0_col8" class="data row0 col8" >8.9490</td>
+    </tr>
+    <tr>
+      <th id="T_e6f75_level0_row1" class="row_heading level0 row1" >gbc</th>
+      <td id="T_e6f75_row1_col0" class="data row1 col0" >Gradient Boosting Classifier</td>
+      <td id="T_e6f75_row1_col1" class="data row1 col1" >0.8664</td>
+      <td id="T_e6f75_row1_col2" class="data row1 col2" >0.8301</td>
+      <td id="T_e6f75_row1_col3" class="data row1 col3" >0.1672</td>
+      <td id="T_e6f75_row1_col4" class="data row1 col4" >0.5711</td>
+      <td id="T_e6f75_row1_col5" class="data row1 col5" >0.2586</td>
+      <td id="T_e6f75_row1_col6" class="data row1 col6" >0.2086</td>
+      <td id="T_e6f75_row1_col7" class="data row1 col7" >0.2570</td>
+      <td id="T_e6f75_row1_col8" class="data row1 col8" >21.3390</td>
+    </tr>
+    <tr>
+      <th id="T_e6f75_level0_row2" class="row_heading level0 row2" >ada</th>
+      <td id="T_e6f75_row2_col0" class="data row2 col0" >Ada Boost Classifier</td>
+      <td id="T_e6f75_row2_col1" class="data row2 col1" >0.8649</td>
+      <td id="T_e6f75_row2_col2" class="data row2 col2" >0.8267</td>
+      <td id="T_e6f75_row2_col3" class="data row2 col3" >0.1915</td>
+      <td id="T_e6f75_row2_col4" class="data row2 col4" >0.5435</td>
+      <td id="T_e6f75_row2_col5" class="data row2 col5" >0.2832</td>
+      <td id="T_e6f75_row2_col6" class="data row2 col6" >0.2270</td>
+      <td id="T_e6f75_row2_col7" class="data row2 col7" >0.2651</td>
+      <td id="T_e6f75_row2_col8" class="data row2 col8" >4.8020</td>
+    </tr>
+    <tr>
+      <th id="T_e6f75_level0_row3" class="row_heading level0 row3" >xgboost</th>
+      <td id="T_e6f75_row3_col0" class="data row3 col0" >Extreme Gradient Boosting</td>
+      <td id="T_e6f75_row3_col1" class="data row3 col1" >0.8645</td>
+      <td id="T_e6f75_row3_col2" class="data row3 col2" >0.8254</td>
+      <td id="T_e6f75_row3_col3" class="data row3 col3" >0.1706</td>
+      <td id="T_e6f75_row3_col4" class="data row3 col4" >0.5437</td>
+      <td id="T_e6f75_row3_col5" class="data row3 col5" >0.2597</td>
+      <td id="T_e6f75_row3_col6" class="data row3 col6" >0.2069</td>
+      <td id="T_e6f75_row3_col7" class="data row3 col7" >0.2496</td>
+      <td id="T_e6f75_row3_col8" class="data row3 col8" >2.1220</td>
+    </tr>
+    <tr>
+      <th id="T_e6f75_level0_row4" class="row_heading level0 row4" >lr</th>
+      <td id="T_e6f75_row4_col0" class="data row4 col0" >Logistic Regression</td>
+      <td id="T_e6f75_row4_col1" class="data row4 col1" >0.8632</td>
+      <td id="T_e6f75_row4_col2" class="data row4 col2" >0.8223</td>
+      <td id="T_e6f75_row4_col3" class="data row4 col3" >0.1552</td>
+      <td id="T_e6f75_row4_col4" class="data row4 col4" >0.5307</td>
+      <td id="T_e6f75_row4_col5" class="data row4 col5" >0.2401</td>
+      <td id="T_e6f75_row4_col6" class="data row4 col6" >0.1890</td>
+      <td id="T_e6f75_row4_col7" class="data row4 col7" >0.2329</td>
+      <td id="T_e6f75_row4_col8" class="data row4 col8" >7.7110</td>
+    </tr>
+    <tr>
+      <th id="T_e6f75_level0_row5" class="row_heading level0 row5" >ridge</th>
+      <td id="T_e6f75_row5_col0" class="data row5 col0" >Ridge Classifier</td>
+      <td id="T_e6f75_row5_col1" class="data row5 col1" >0.8625</td>
+      <td id="T_e6f75_row5_col2" class="data row5 col2" >0.0000</td>
+      <td id="T_e6f75_row5_col3" class="data row5 col3" >0.0395</td>
+      <td id="T_e6f75_row5_col4" class="data row5 col4" >0.6042</td>
+      <td id="T_e6f75_row5_col5" class="data row5 col5" >0.0742</td>
+      <td id="T_e6f75_row5_col6" class="data row5 col6" >0.0580</td>
+      <td id="T_e6f75_row5_col7" class="data row5 col7" >0.1287</td>
+      <td id="T_e6f75_row5_col8" class="data row5 col8" >0.2850</td>
+    </tr>
+    <tr>
+      <th id="T_e6f75_level0_row6" class="row_heading level0 row6" >lda</th>
+      <td id="T_e6f75_row6_col0" class="data row6 col0" >Linear Discriminant Analysis</td>
+      <td id="T_e6f75_row6_col1" class="data row6 col1" >0.8614</td>
+      <td id="T_e6f75_row6_col2" class="data row6 col2" >0.8196</td>
+      <td id="T_e6f75_row6_col3" class="data row6 col3" >0.2059</td>
+      <td id="T_e6f75_row6_col4" class="data row6 col4" >0.5069</td>
+      <td id="T_e6f75_row6_col5" class="data row6 col5" >0.2928</td>
+      <td id="T_e6f75_row6_col6" class="data row6 col6" >0.2309</td>
+      <td id="T_e6f75_row6_col7" class="data row6 col7" >0.2599</td>
+      <td id="T_e6f75_row6_col8" class="data row6 col8" >1.4820</td>
+    </tr>
+    <tr>
+      <th id="T_e6f75_level0_row7" class="row_heading level0 row7" >dummy</th>
+      <td id="T_e6f75_row7_col0" class="data row7 col0" >Dummy Classifier</td>
+      <td id="T_e6f75_row7_col1" class="data row7 col1" >0.8607</td>
+      <td id="T_e6f75_row7_col2" class="data row7 col2" >0.5000</td>
+      <td id="T_e6f75_row7_col3" class="data row7 col3" >0.0000</td>
+      <td id="T_e6f75_row7_col4" class="data row7 col4" >0.0000</td>
+      <td id="T_e6f75_row7_col5" class="data row7 col5" >0.0000</td>
+      <td id="T_e6f75_row7_col6" class="data row7 col6" >0.0000</td>
+      <td id="T_e6f75_row7_col7" class="data row7 col7" >0.0000</td>
+      <td id="T_e6f75_row7_col8" class="data row7 col8" >0.1260</td>
+    </tr>
+    <tr>
+      <th id="T_e6f75_level0_row8" class="row_heading level0 row8" >rf</th>
+      <td id="T_e6f75_row8_col0" class="data row8 col0" >Random Forest Classifier</td>
+      <td id="T_e6f75_row8_col1" class="data row8 col1" >0.8598</td>
+      <td id="T_e6f75_row8_col2" class="data row8 col2" >0.7985</td>
+      <td id="T_e6f75_row8_col3" class="data row8 col3" >0.1704</td>
+      <td id="T_e6f75_row8_col4" class="data row8 col4" >0.4915</td>
+      <td id="T_e6f75_row8_col5" class="data row8 col5" >0.2530</td>
+      <td id="T_e6f75_row8_col6" class="data row8 col6" >0.1953</td>
+      <td id="T_e6f75_row8_col7" class="data row8 col7" >0.2291</td>
+      <td id="T_e6f75_row8_col8" class="data row8 col8" >20.7470</td>
+    </tr>
+    <tr>
+      <th id="T_e6f75_level0_row9" class="row_heading level0 row9" >et</th>
+      <td id="T_e6f75_row9_col0" class="data row9 col0" >Extra Trees Classifier</td>
+      <td id="T_e6f75_row9_col1" class="data row9 col1" >0.8515</td>
+      <td id="T_e6f75_row9_col2" class="data row9 col2" >0.7767</td>
+      <td id="T_e6f75_row9_col3" class="data row9 col3" >0.1742</td>
+      <td id="T_e6f75_row9_col4" class="data row9 col4" >0.4205</td>
+      <td id="T_e6f75_row9_col5" class="data row9 col5" >0.2463</td>
+      <td id="T_e6f75_row9_col6" class="data row9 col6" >0.1793</td>
+      <td id="T_e6f75_row9_col7" class="data row9 col7" >0.2009</td>
+      <td id="T_e6f75_row9_col8" class="data row9 col8" >27.1720</td>
+    </tr>
+    <tr>
+      <th id="T_e6f75_level0_row10" class="row_heading level0 row10" >knn</th>
+      <td id="T_e6f75_row10_col0" class="data row10 col0" >K Neighbors Classifier</td>
+      <td id="T_e6f75_row10_col1" class="data row10 col1" >0.8475</td>
+      <td id="T_e6f75_row10_col2" class="data row10 col2" >0.7104</td>
+      <td id="T_e6f75_row10_col3" class="data row10 col3" >0.1937</td>
+      <td id="T_e6f75_row10_col4" class="data row10 col4" >0.4024</td>
+      <td id="T_e6f75_row10_col5" class="data row10 col5" >0.2615</td>
+      <td id="T_e6f75_row10_col6" class="data row10 col6" >0.1879</td>
+      <td id="T_e6f75_row10_col7" class="data row10 col7" >0.2037</td>
+      <td id="T_e6f75_row10_col8" class="data row10 col8" >32.6600</td>
+    </tr>
+    <tr>
+      <th id="T_e6f75_level0_row11" class="row_heading level0 row11" >svm</th>
+      <td id="T_e6f75_row11_col0" class="data row11 col0" >SVM - Linear Kernel</td>
+      <td id="T_e6f75_row11_col1" class="data row11 col1" >0.8433</td>
+      <td id="T_e6f75_row11_col2" class="data row11 col2" >0.0000</td>
+      <td id="T_e6f75_row11_col3" class="data row11 col3" >0.2322</td>
+      <td id="T_e6f75_row11_col4" class="data row11 col4" >0.3617</td>
+      <td id="T_e6f75_row11_col5" class="data row11 col5" >0.2277</td>
+      <td id="T_e6f75_row11_col6" class="data row11 col6" >0.1722</td>
+      <td id="T_e6f75_row11_col7" class="data row11 col7" >0.1946</td>
+      <td id="T_e6f75_row11_col8" class="data row11 col8" >4.3180</td>
+    </tr>
+    <tr>
+      <th id="T_e6f75_level0_row12" class="row_heading level0 row12" >dt</th>
+      <td id="T_e6f75_row12_col0" class="data row12 col0" >Decision Tree Classifier</td>
+      <td id="T_e6f75_row12_col1" class="data row12 col1" >0.7957</td>
+      <td id="T_e6f75_row12_col2" class="data row12 col2" >0.5947</td>
+      <td id="T_e6f75_row12_col3" class="data row12 col3" >0.3186</td>
+      <td id="T_e6f75_row12_col4" class="data row12 col4" >0.2888</td>
+      <td id="T_e6f75_row12_col5" class="data row12 col5" >0.3030</td>
+      <td id="T_e6f75_row12_col6" class="data row12 col6" >0.1836</td>
+      <td id="T_e6f75_row12_col7" class="data row12 col7" >0.1840</td>
+      <td id="T_e6f75_row12_col8" class="data row12 col8" >0.7580</td>
+    </tr>
+    <tr>
+      <th id="T_e6f75_level0_row13" class="row_heading level0 row13" >nb</th>
+      <td id="T_e6f75_row13_col0" class="data row13 col0" >Naive Bayes</td>
+      <td id="T_e6f75_row13_col1" class="data row13 col1" >0.7738</td>
+      <td id="T_e6f75_row13_col2" class="data row13 col2" >0.7843</td>
+      <td id="T_e6f75_row13_col3" class="data row13 col3" >0.5702</td>
+      <td id="T_e6f75_row13_col4" class="data row13 col4" >0.3233</td>
+      <td id="T_e6f75_row13_col5" class="data row13 col5" >0.4126</td>
+      <td id="T_e6f75_row13_col6" class="data row13 col6" >0.2856</td>
+      <td id="T_e6f75_row13_col7" class="data row13 col7" >0.3032</td>
+      <td id="T_e6f75_row13_col8" class="data row13 col8" >0.1660</td>
+    </tr>
+    <tr>
+      <th id="T_e6f75_level0_row14" class="row_heading level0 row14" >qda</th>
+      <td id="T_e6f75_row14_col0" class="data row14 col0" >Quadratic Discriminant Analysis</td>
+      <td id="T_e6f75_row14_col1" class="data row14 col1" >0.7710</td>
+      <td id="T_e6f75_row14_col2" class="data row14 col2" >0.7803</td>
+      <td id="T_e6f75_row14_col3" class="data row14 col3" >0.5585</td>
+      <td id="T_e6f75_row14_col4" class="data row14 col4" >0.3172</td>
+      <td id="T_e6f75_row14_col5" class="data row14 col5" >0.4046</td>
+      <td id="T_e6f75_row14_col6" class="data row14 col6" >0.2759</td>
+      <td id="T_e6f75_row14_col7" class="data row14 col7" >0.2929</td>
+      <td id="T_e6f75_row14_col8" class="data row14 col8" >0.4910</td>
+    </tr>
+  </tbody>
+</table>
+</div><script type="application/vnd.jupyter.widget-view+json">{"model_id": "d03d67c6ecc2425ab869c5708d945caa", "version_major": 2, "version_minor": 0}</script><div class="output text_html"></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">predict_model</span><span class="p">(</span><span class="n">best</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_47f62" class="dataframe">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_47f62_level0_col0" class="col_heading level0 col0" >Model</th>
+      <th id="T_47f62_level0_col1" class="col_heading level0 col1" >Accuracy</th>
+      <th id="T_47f62_level0_col2" class="col_heading level0 col2" >AUC</th>
+      <th id="T_47f62_level0_col3" class="col_heading level0 col3" >Recall</th>
+      <th id="T_47f62_level0_col4" class="col_heading level0 col4" >Prec.</th>
+      <th id="T_47f62_level0_col5" class="col_heading level0 col5" >F1</th>
+      <th id="T_47f62_level0_col6" class="col_heading level0 col6" >Kappa</th>
+      <th id="T_47f62_level0_col7" class="col_heading level0 col7" >MCC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_47f62_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_47f62_row0_col0" class="data row0 col0" >Light Gradient Boosting Machine</td>
+      <td id="T_47f62_row0_col1" class="data row0 col1" >0.8665</td>
+      <td id="T_47f62_row0_col2" class="data row0 col2" >0.8292</td>
+      <td id="T_47f62_row0_col3" class="data row0 col3" >0.1610</td>
+      <td id="T_47f62_row0_col4" class="data row0 col4" >0.5749</td>
+      <td id="T_47f62_row0_col5" class="data row0 col5" >0.2515</td>
+      <td id="T_47f62_row0_col6" class="data row0 col6" >0.2029</td>
+      <td id="T_47f62_row0_col7" class="data row0 col7" >0.2534</td>
+    </tr>
+  </tbody>
+</table>
+</div><div class="output text_html">
+  <div id="df-68cc2367-566c-4426-ba06-1780cf15615b" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>HighBP</th>
+      <th>HighChol</th>
+      <th>CholCheck</th>
+      <th>BMI</th>
+      <th>Smoker</th>
+      <th>Stroke</th>
+      <th>HeartDiseaseorAttack</th>
+      <th>PhysActivity</th>
+      <th>Fruits</th>
+      <th>Veggies</th>
+      <th>...</th>
+      <th>MentHlth</th>
+      <th>PhysHlth</th>
+      <th>DiffWalk</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>Education</th>
+      <th>Income</th>
+      <th>Diabetes_binary</th>
+      <th>prediction_label</th>
+      <th>prediction_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>110959</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>18.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>6.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0.9978</td>
+    </tr>
+    <tr>
+      <th>148493</th>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>29.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0.9376</td>
+    </tr>
+    <tr>
+      <th>77022</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>19.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>15.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0.9767</td>
+    </tr>
+    <tr>
+      <th>192864</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>26.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>10.0</td>
+      <td>5.0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0.8837</td>
+    </tr>
+    <tr>
+      <th>187801</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>28.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>9.0</td>
+      <td>6.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0.9924</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>199797</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>29.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>6.0</td>
+      <td>5.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0.9924</td>
+    </tr>
+    <tr>
+      <th>179610</th>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>40.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>9.0</td>
+      <td>6.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0.9534</td>
+    </tr>
+    <tr>
+      <th>169118</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>28.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>8.0</td>
+      <td>4.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0.9259</td>
+    </tr>
+    <tr>
+      <th>57464</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>36.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>10.0</td>
+      <td>15.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>13.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0.5895</td>
+    </tr>
+    <tr>
+      <th>123667</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>24.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>10.0</td>
+      <td>6.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0.9863</td>
+    </tr>
+  </tbody>
+</table>
+<p>76104 rows × 24 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-68cc2367-566c-4426-ba06-1780cf15615b')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-68cc2367-566c-4426-ba06-1780cf15615b button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-68cc2367-566c-4426-ba06-1780cf15615b');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-769b9d30-c3ce-4876-bb67-1892a84a2f3b">
+  <button class="colab-df-quickchart" onclick="quickchart('df-769b9d30-c3ce-4876-bb67-1892a84a2f3b')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-769b9d30-c3ce-4876-bb67-1892a84a2f3b button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+<section id="light-gradient-boosting-machine-lightgbm">
+<h2>Light Gradient Boosting Machine (LightGBM)<a class="headerlink" href="#light-gradient-boosting-machine-lightgbm" title="Permalink to this heading">#</a></h2>
+<p>Light Gradient Boosting Machine (LightGBM) adalah framework gradient-boosting yang didasarkan pada pohon keputusan untuk meningkatkan efisiensi model dan mengurangi penggunaan memori.</p>
+<section id="cara-kerja-lightgbm">
+<h3>Cara Kerja LightGBM<a class="headerlink" href="#cara-kerja-lightgbm" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Gradient Boosting</strong>: LightGBM adalah algoritma ensemble berbasis gradient boosting. Algoritma ini bekerja dengan menggabungkan beberapa pohon keputusan (biasanya pohon yang dangkal) untuk meningkatkan performa prediksi.</p></li>
+<li><p><strong>Leaf-Wise Splitting</strong>: LightGBM menggunakan leaf-wise splitting, yang memungkinkan untuk membangun pohon dengan sedikit node yang lebih dalam. Ini berbeda dari level-wise splitting yang digunakan oleh banyak algoritma pohon keputusan lainnya.</p></li>
+<li><p><strong>Histogram-based Learning</strong>: LightGBM menggunakan histogram-based learning, yaitu mengelompokkan data menjadi interval nilai (histogram) untuk mengurangi kompleksitas perhitungan dan meningkatkan efisiensi.</p></li>
+<li><p><strong>Parameter Kontrol Overfitting</strong>: Anda dapat mengendalikan tingkat overfitting dengan mengatur parameter seperti <code class="docutils literal notranslate"><span class="pre">max_depth</span></code>, <code class="docutils literal notranslate"><span class="pre">min_child_samples</span></code>, dan lain-lain.</p></li>
+<li><p><strong>Dukungan GPU</strong>: LightGBM mendukung pelatihan pada GPU, yang dapat mempercepat proses pelatihan.</p></li>
+</ul>
+</section>
+<section id="arsitektur-lightbgm">
+<h3>Arsitektur LightBGM<a class="headerlink" href="#arsitektur-lightbgm" title="Permalink to this heading">#</a></h3>
+<p>LightBGM membagi tree leaf-wise yang berlawanan dengan algoritma boosting lainnya yang menumbuhkan tree level-wise. Algoritma ini memilih daun dengan delta loss maksimum untuk tumbuh. Karena daunnya tetap, algoritma leaf-wise memiliki kerugian yang lebih rendah dibandingkan dengan algoritma level-wise. Pertumbuhan pohon secara leaf-wise dapat meningkatkan kompleksitas model dan dapat menyebabkan overfitting pada dataset yang kecil.
+Di bawah ini adalah representasi diagram dari Pertumbuhan Pohon Bijaksana Daun:</p>
+<p><img alt="LGBM" src="https://media.geeksforgeeks.org/wp-content/uploads/20200520035248/Leaf-Wise-Tree-Growth.png" /></p>
+</section>
+<section id="rumus">
+<h3>Rumus<a class="headerlink" href="#rumus" title="Permalink to this heading">#</a></h3>
+<p>Secara umum, LightGBM tidak memiliki rumus matematis seperti yang dimiliki oleh beberapa algoritma lain seperti regresi linier. Namun, salah satu rumus utama yang digunakan dalam algoritma ensemble ini adalah rumus untuk perhitungan nilai prediksi dari sejumlah pohon keputusan:</p>
+<p><span class="math notranslate nohighlight">\( \hat{y} = \sum_{i=1}^{n} f_i(x) \)</span></p>
+<p>Di mana:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\hat{y}\)</span> adalah nilai prediksi.</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\)</span> adalah jumlah pohon dalam ensemble.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f_i(x)\)</span> adalah fungsi prediksi dari pohon keputusan ke-<span class="math notranslate nohighlight">\(i\)</span> yang diaplikasikan pada data <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+</ul>
+</section>
+<section id="penggunaan">
+<h3>Penggunaan<a class="headerlink" href="#penggunaan" title="Permalink to this heading">#</a></h3>
+<p>LightGBM sangat cocok untuk dataset besar dan tugas klasifikasi atau regresi yang kompleks. Ini adalah salah satu algoritma yang populer dalam kompetisi data science dan digunakan dalam berbagai aplikasi machine learning.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lightgbm</span> <span class="k">as</span> <span class="nn">lgb</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="parameter-lightgbm">
+<h1><strong>Parameter LightGBM</strong><a class="headerlink" href="#parameter-lightgbm" title="Permalink to this heading">#</a></h1>
+<p>parameter pada inisialisasi metoode LightGBM adalah parameter yang digunakan untuk mengonfigurasi dan mengendalikan perilaku model LightGBM. Parameters ini membantu Anda menyesuaikan model LightGBM sesuai dengan kebutuhan dan karakteristik data Anda.</p>
+<p>Parameter-parameter ini dapat mencakup berbagai aspek seperti:</p>
+<ul class="simple">
+<li><p><strong>Parameter Model</strong>: Parameter yang mempengaruhi struktur dan karakteristik model, seperti <strong>objective</strong> (tujuan tugas, misalnya “binary” untuk klasifikasi biner), <strong>num_leaves</strong> (jumlah daun dalam setiap pohon), <strong>learning_rate</strong> (tingkat pembelajaran), <strong>n_estimators</strong> (jumlah pohon dalam ensemble), dan lain-lain.</p></li>
+<li><p><strong>Parameter Pelatihan</strong>: Parameter yang memengaruhi proses pelatihan model, seperti <strong>max_depth</strong> (kedalaman maksimum setiap pohon), <strong>min_child_samples</strong> (jumlah sampel minimum di setiap leaf node), <strong>early_stopping_rounds</strong> (berhenti dini jika performa tidak membaik dalam sejumlah iterasi tertentu), dan lain-lain.</p></li>
+<li><p><strong>Parameter Penyusunan</strong> Model: Parameter yang memengaruhi bagaimana model dianalogikan, seperti <strong>metric</strong> (metrik evaluasi yang digunakan selama pelatihan), <strong>categorical_feature</strong> (fitur-fitur kategori yang harus diperlakukan secara khusus), dan lain-lain.</p></li>
+<li><p><strong>Parameter Komputasi</strong>: Parameter yang memengaruhi pengaturan komputasi, seperti penggunaan GPU (<strong>device</strong>), <strong>nthread</strong> (jumlah thread yang digunakan selama pelatihan), dan lain-lain.</p></li>
+</ul>
+<p>#<strong>Parameter terbaik yang akan dipakai menurut rekomendasi dari PyCaret</strong></p>
+<ul class="simple">
+<li><p>boosting_type=’gbdt’: Jenis boosting yang digunakan. ‘gbdt’ adalah Gradient Boosting Decision Tree, yang merupakan jenis boosting paling umum.</p></li>
+<li><p>class_weight=None: Pilihan untuk menangani ketidakseimbangan kelas. Jika Anda memiliki masalah klasifikasi yang tidak seimbang, Anda dapat mengaturnya menjadi ‘balanced’ atau menyediakan bobot kelas secara manual.</p></li>
+<li><p>colsample_bytree=1.0: Persentase fitur yang akan digunakan pada setiap iterasi. Nilai 1.0 berarti menggunakan semua fitur.</p></li>
+<li><p>importance_type=’split’: Jenis penghitungan pentingnya fitur. ‘split’ menghitung berapa kali suatu fitur digunakan dalam pemisahan simpul, sedangkan ‘gain’ menghitung gain informasi.</p></li>
+<li><p>learning_rate=0.1: Tingkat pembelajaran atau laju belajar model. Ini menentukan seberapa besar kontribusi dari setiap pohon dalam ensemble.</p></li>
+<li><p>max_depth=-1: Kedalaman maksimum dari setiap pohon. -1 berarti tidak ada batasan pada kedalaman pohon.</p></li>
+<li><p>min_child_samples=20: Jumlah sampel minimum yang diperlukan untuk membentuk simpul daun dalam pohon.</p></li>
+<li><p>min_child_weight=0.001: Berat minimum yang diperlukan pada setiap anak simpul.</p></li>
+<li><p>min_split_gain=0.0: Gain minimum yang diperlukan untuk membagi simpul.</p></li>
+<li><p>n_estimators=100: Jumlah pohon atau iterasi yang akan dilatih.</p></li>
+<li><p>n_jobs=-1: Jumlah pekerja atau inti CPU yang akan digunakan dalam pelatihan. -1 berarti menggunakan semua inti yang tersedia.</p></li>
+<li><p>num_leaves=31: Jumlah daun atau simpul terminal pada setiap pohon.</p></li>
+<li><p>objective=None: Tujuan dari model. Jika tidak ditentukan, maka itu akan diambil dari parameter boosting_type.</p></li>
+<li><p>random_state=4329: Seed untuk menghasilkan angka acak untuk reproduktibilitas.</p></li>
+<li><p>reg_alpha=0.0 dan reg_lambda=0.0: Parameter regularisasi. Menambahkan regularisasi membantu mencegah overfitting.</p></li>
+<li><p>subsample=1.0: Persentase sampel yang akan digunakan pada setiap iterasi. Nilai 1.0 berarti menggunakan semua sampel.</p></li>
+<li><p>subsample_for_bin=200000: Jumlah sampel yang digunakan untuk membangun histogram pada data kategorikal.</p></li>
+<li><p>subsample_freq=0: Frekuensi pengecekan pengambilan sampel. Jika non-nol, itu menjadi jumlah langkah antara pengambilan sampel.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inisialisasi model LightGBM dengan params yang direkomendasikan oleh pycaret</span>
+<span class="n">model_lgbm</span> <span class="o">=</span> <span class="n">lgb</span><span class="o">.</span><span class="n">LGBMClassifier</span><span class="p">(</span><span class="n">boosting_type</span><span class="o">=</span><span class="s1">&#39;gbdt&#39;</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">colsample_bytree</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span><span class="n">importance_type</span><span class="o">=</span><span class="s1">&#39;split&#39;</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">min_child_samples</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">min_child_weight</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">min_split_gain</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_leaves</span><span class="o">=</span><span class="mi">31</span><span class="p">,</span> <span class="n">objective</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">4329</span><span class="p">,</span> <span class="n">reg_alpha</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">reg_lambda</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">subsample</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span><span class="n">subsample_for_bin</span><span class="o">=</span><span class="mi">200000</span><span class="p">,</span> <span class="n">subsample_freq</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melatih model pada data pelatihan</span>
+<span class="n">model_lgbm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;LightGBM.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">model_lgbm</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+
+<span class="c1"># Melakukan prediksi pada data pengujian</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model_lgbm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-29-be12cce9b1bc&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Melatih model pada data pelatihan</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">model_lgbm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;LightGBM.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">model_lgbm</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/lightgbm/sklearn.py</span> in <span class="ni">fit</span><span class="nt">(self, X, y, sample_weight, init_score, eval_set, eval_names, eval_sample_weight, eval_class_weight, eval_init_score, eval_metric, feature_name, categorical_feature, callbacks, init_model)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1140</span>                     <span class="n">valid_sets</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">valid_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_le</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">valid_y</span><span class="p">)))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1141</span> 
+<span class="ne">-&gt; </span><span class="mi">1142</span>         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1143</span>             <span class="n">X</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1144</span>             <span class="n">_y</span><span class="p">,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/lightgbm/sklearn.py</span> in <span class="ni">fit</span><span class="nt">(self, X, y, sample_weight, init_score, group, eval_set, eval_names, eval_sample_weight, eval_class_weight, eval_init_score, eval_group, eval_metric, feature_name, categorical_feature, callbacks, init_model)</span>
+<span class="g g-Whitespace">    </span><span class="mi">768</span> 
+<span class="g g-Whitespace">    </span><span class="mi">769</span>         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="p">(</span><span class="n">pd_DataFrame</span><span class="p">,</span> <span class="n">dt_DataTable</span><span class="p">)):</span>
+<span class="ne">--&gt; </span><span class="mi">770</span>             <span class="n">_X</span><span class="p">,</span> <span class="n">_y</span> <span class="o">=</span> <span class="n">_LGBMCheckXY</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">accept_sparse</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">force_all_finite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ensure_min_samples</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">771</span>             <span class="k">if</span> <span class="n">sample_weight</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">772</span>                 <span class="n">sample_weight</span> <span class="o">=</span> <span class="n">_LGBMCheckSampleWeight</span><span class="p">(</span><span class="n">sample_weight</span><span class="p">,</span> <span class="n">_X</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/sklearn/utils/validation.py</span> in <span class="ni">check_X_y</span><span class="nt">(X, y, accept_sparse, accept_large_sparse, dtype, order, copy, force_all_finite, ensure_2d, allow_nd, multi_output, ensure_min_samples, ensure_min_features, y_numeric, estimator)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1104</span>         <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1105</span> 
+<span class="ne">-&gt; </span><span class="mi">1106</span>     <span class="n">X</span> <span class="o">=</span> <span class="n">check_array</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1107</span>         <span class="n">X</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1108</span>         <span class="n">accept_sparse</span><span class="o">=</span><span class="n">accept_sparse</span><span class="p">,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/sklearn/utils/validation.py</span> in <span class="ni">check_array</span><span class="nt">(array, accept_sparse, accept_large_sparse, dtype, order, copy, force_all_finite, ensure_2d, allow_nd, ensure_min_samples, ensure_min_features, estimator, input_name)</span>
+<span class="g g-Whitespace">    </span><span class="mi">892</span>             <span class="c1"># If input is scalar raise error</span>
+<span class="g g-Whitespace">    </span><span class="mi">893</span>             <span class="k">if</span> <span class="n">array</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">894</span>                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">895</span>                     <span class="s2">&quot;Expected 2D array, got scalar array instead:</span><span class="se">\n</span><span class="s2">array=</span><span class="si">{}</span><span class="s2">.</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">896</span>                     <span class="s2">&quot;Reshape your data either using array.reshape(-1, 1) if &quot;</span>
+
+<span class="ne">ValueError</span>: Expected 2D array, got scalar array instead:
+<span class="n">array</span><span class="o">=</span><span class="n">StandardScaler</span><span class="p">(</span><span class="n">copy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">with_mean</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">with_std</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span>
+<span class="n">Reshape</span> <span class="n">your</span> <span class="n">data</span> <span class="n">either</span> <span class="n">using</span> <span class="n">array</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">your</span> <span class="n">data</span> <span class="n">has</span> <span class="n">a</span> <span class="n">single</span> <span class="n">feature</span> <span class="ow">or</span> <span class="n">array</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">it</span> <span class="n">contains</span> <span class="n">a</span> <span class="n">single</span> <span class="n">sample</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengukur performa model</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Akurasi model: </span><span class="si">{:.2f}</span><span class="s2">%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span><span class="n">X_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="testing-model">
+<h1><strong>Testing Model</strong><a class="headerlink" href="#testing-model" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_ke</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">57257</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data_ke</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_lgbm</span> <span class="o">=</span><span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">29.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mf">30.0</span><span class="p">,</span><span class="mf">30.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mf">6.0</span><span class="p">,</span><span class="mf">8.0</span><span class="p">]]</span> <span class="c1"># target seharusnya = 0</span>
+
+<span class="n">y_prediksi</span> <span class="o">=</span> <span class="n">model_lgbm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data_lgbm</span><span class="p">)</span>
+<span class="n">y_prediksi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_lgbm</span> <span class="o">=</span><span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">22.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">4.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">7.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">]]</span> <span class="c1"># target seharusnya = 0</span>
+
+<span class="n">y_prediksi</span> <span class="o">=</span> <span class="n">model_lgbm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data_lgbm</span><span class="p">)</span>
+<span class="n">y_prediksi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_lgbm</span> <span class="o">=</span><span class="p">[[</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">30.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mf">30.0</span><span class="p">,</span><span class="mf">30.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">9.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">]]</span> <span class="c1"># target seharusnya = 1</span>
+
+<span class="n">y_prediksi</span> <span class="o">=</span> <span class="n">model_lgbm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data_lgbm</span><span class="p">)</span>
+<span class="n">y_prediksi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_lgbm</span> <span class="o">=</span><span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">25.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">3.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">7.0</span><span class="p">,</span><span class="mf">6.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">]]</span> <span class="c1"># target seharusnya = 0</span>
+
+<span class="n">y_prediksi</span> <span class="o">=</span> <span class="n">model_lgbm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data_lgbm</span><span class="p">)</span>
+<span class="n">y_prediksi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>--execute<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span><span class="s2">&quot;/content/PSD_Proyek2.ipynb&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Business Understanding</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-mengenai-dataset-cdc-diabetes-health-indicators"><strong>Penjelasan Mengenai Dataset CDC Diabetes Health Indicators</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-understanding"><strong>Data Understanding</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-fitur"><strong>Penjelasan Fitur</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-processing"><strong>Pre-Processing</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling"><strong>Modelling</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pycaret"><strong>PyCaret</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#light-gradient-boosting-machine-lightgbm">Light Gradient Boosting Machine (LightGBM)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-kerja-lightgbm">Cara Kerja LightGBM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arsitektur-lightbgm">Arsitektur LightBGM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus">Rumus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penggunaan">Penggunaan</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#parameter-lightgbm"><strong>Parameter LightGBM</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-model"><strong>Testing Model</strong></a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
