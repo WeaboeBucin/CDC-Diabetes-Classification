@@ -67,6 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'PSD Proyek2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -167,10 +168,15 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Business Understanding</strong></a></li>
+
+
+
+
+
+
+
 </ul>
 
     </div>
@@ -413,18 +419,13 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Ignoring invalid distribution -atplotlib (/usr/local/lib/python3.10/dist-packages)</span>
-
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pycaret
-  Using cached pycaret-3.2.0-py3-none-any.whl (484 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting category-encoders&gt;=2.4.0 (from pycaret)
-  Using cached category_encoders-2.6.3-py2.py3-none-any.whl (81 kB)
+Requirement already satisfied: pycaret in /usr/local/lib/python3.10/dist-packages (3.2.0)
+Requirement already satisfied: category-encoders&gt;=2.4.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (2.6.3)
 Requirement already satisfied: cloudpickle in /usr/local/lib/python3.10/dist-packages (from pycaret) (2.2.1)
 Requirement already satisfied: deprecation&gt;=2.1.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (2.1.0)
-Requirement already satisfied: imbalanced-learn&gt;=0.8.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.10.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: imbalanced-learn&gt;=0.8.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.10.1)
 Requirement already satisfied: importlib-metadata&gt;=4.12.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (6.8.0)
 Requirement already satisfied: ipython&gt;=5.5.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (7.34.0)
 Requirement already satisfied: ipywidgets&gt;=7.6.5 in /usr/local/lib/python3.10/dist-packages (from pycaret) (7.7.1)
@@ -433,47 +434,24 @@ Requirement already satisfied: joblib&gt;=1.2.0 in /usr/local/lib/python3.10/dis
 Requirement already satisfied: kaleido&gt;=0.2.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.2.1)
 Requirement already satisfied: lightgbm&gt;=3.0.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (4.1.0)
 Requirement already satisfied: markupsafe&gt;=2.0.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (2.1.3)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting matplotlib&lt;=3.6,&gt;=3.3.0 (from pycaret)
-  Using cached matplotlib-3.6.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.8 MB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nbformat&gt;=4.2.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (5.9.2)
+Requirement already satisfied: matplotlib&lt;=3.6,&gt;=3.3.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (3.6.0)
+Requirement already satisfied: nbformat&gt;=4.2.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (5.9.2)
 Requirement already satisfied: numba&gt;=0.55.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.58.1)
 Requirement already satisfied: numpy&lt;1.27,&gt;=1.21 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.23.5)
 Requirement already satisfied: pandas&lt;2.0.0,&gt;=1.3.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.5.3)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting plotly-resampler&gt;=0.8.3.1 (from pycaret)
-  Using cached plotly_resampler-0.9.1-py3-none-any.whl (73 kB)
+Requirement already satisfied: plotly-resampler&gt;=0.8.3.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.9.1)
 Requirement already satisfied: plotly&gt;=5.0.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (5.15.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pmdarima!=1.8.1,&lt;3.0.0,&gt;=1.8.0 (from pycaret)
-  Using cached pmdarima-2.0.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl (2.1 MB)
+Requirement already satisfied: pmdarima!=1.8.1,&lt;3.0.0,&gt;=1.8.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (2.0.4)
 Requirement already satisfied: psutil&gt;=5.9.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (5.9.5)
-Collecting pyod&gt;=1.0.8 (from pycaret)
-  Using cached pyod-1.1.2-py3-none-any.whl
+Requirement already satisfied: pyod&gt;=1.0.8 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.1.2)
 Requirement already satisfied: requests&gt;=2.27.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (2.31.0)
 Requirement already satisfied: schemdraw==0.15 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.15)
 Requirement already satisfied: scikit-learn&lt;1.3.0,&gt;=1.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.2.2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting scikit-plot&gt;=0.3.7 (from pycaret)
-  Using cached scikit_plot-0.3.7-py3-none-any.whl (33 kB)
+Requirement already satisfied: scikit-plot&gt;=0.3.7 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.3.7)
 Requirement already satisfied: scipy~=1.10.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.10.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting sktime!=0.17.1,!=0.17.2,!=0.18.0,&lt;0.22.0,&gt;=0.16.1 (from pycaret)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Using cached sktime-0.21.1-py3-none-any.whl (17.1 MB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: statsmodels&gt;=0.12.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.14.0)
-Collecting tbats&gt;=1.1.3 (from pycaret)
-  Using cached tbats-1.1.3-py3-none-any.whl (44 kB)
+Requirement already satisfied: sktime!=0.17.1,!=0.17.2,!=0.18.0,&lt;0.22.0,&gt;=0.16.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.21.1)
+Requirement already satisfied: statsmodels&gt;=0.12.1 in /usr/local/lib/python3.10/dist-packages (from pycaret) (0.14.0)
+Requirement already satisfied: tbats&gt;=1.1.3 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.1.3)
 Requirement already satisfied: tqdm&gt;=4.62.0 in /usr/local/lib/python3.10/dist-packages (from pycaret) (4.66.1)
 Requirement already satisfied: xxhash in /usr/local/lib/python3.10/dist-packages (from pycaret) (3.4.1)
 Requirement already satisfied: yellowbrick&gt;=1.4 in /usr/local/lib/python3.10/dist-packages (from pycaret) (1.5)
@@ -511,18 +489,15 @@ Requirement already satisfied: jupyter-core in /usr/local/lib/python3.10/dist-pa
 Requirement already satisfied: llvmlite&lt;0.42,&gt;=0.41.0dev0 in /usr/local/lib/python3.10/dist-packages (from numba&gt;=0.55.0-&gt;pycaret) (0.41.1)
 Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas&lt;2.0.0,&gt;=1.3.0-&gt;pycaret) (2023.3.post1)
 Requirement already satisfied: tenacity&gt;=6.2.0 in /usr/local/lib/python3.10/dist-packages (from plotly&gt;=5.0.0-&gt;pycaret) (8.2.3)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting dash&lt;3.0.0,&gt;=2.11.0 (from plotly-resampler&gt;=0.8.3.1-&gt;pycaret)
-  Using cached dash-2.14.1-py3-none-any.whl (10.4 MB)
+Requirement already satisfied: dash&lt;3.0.0,&gt;=2.11.0 in /usr/local/lib/python3.10/dist-packages (from plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (2.14.1)
 Requirement already satisfied: orjson&lt;4.0.0,&gt;=3.8.0 in /usr/local/lib/python3.10/dist-packages (from plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (3.9.10)
 Requirement already satisfied: trace-updater&gt;=0.0.8 in /usr/local/lib/python3.10/dist-packages (from plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (0.0.9.1)
-Requirement already satisfied: tsdownsample==0.1.2 in /usr/local/lib/python3.10/dist-packages (from plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (0.1.2)
-Requirement already satisfied: Cython!=0.29.18,!=0.29.31,&gt;=0.29 in /usr/local/lib/python3.10/dist-packages (from pmdarima!=1.8.1,&lt;3.0.0,&gt;=1.8.0-&gt;pycaret) (3.0.5)
-Requirement already satisfied: urllib3 in /usr/local/lib/python3.10/dist-packages (from pmdarima!=1.8.1,&lt;3.0.0,&gt;=1.8.0-&gt;pycaret) (2.0.7)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six in /usr/local/lib/python3.10/dist-packages (from pyod&gt;=1.0.8-&gt;pycaret) (1.16.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: tsdownsample==0.1.2 in /usr/local/lib/python3.10/dist-packages (from plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (0.1.2)
+Requirement already satisfied: Cython!=0.29.18,!=0.29.31,&gt;=0.29 in /usr/local/lib/python3.10/dist-packages (from pmdarima!=1.8.1,&lt;3.0.0,&gt;=1.8.0-&gt;pycaret) (3.0.5)
+Requirement already satisfied: urllib3 in /usr/local/lib/python3.10/dist-packages (from pmdarima!=1.8.1,&lt;3.0.0,&gt;=1.8.0-&gt;pycaret) (2.0.7)
+Requirement already satisfied: six in /usr/local/lib/python3.10/dist-packages (from pyod&gt;=1.0.8-&gt;pycaret) (1.16.0)
 Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests&gt;=2.27.1-&gt;pycaret) (3.3.2)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests&gt;=2.27.1-&gt;pycaret) (3.4)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests&gt;=2.27.1-&gt;pycaret) (2023.7.22)
@@ -542,22 +517,26 @@ Requirement already satisfied: retrying in /usr/local/lib/python3.10/dist-packag
 Requirement already satisfied: ansi2html in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (1.8.0)
 Requirement already satisfied: nest-asyncio in /usr/local/lib/python3.10/dist-packages (from dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (1.5.8)
 Requirement already satisfied: wrapt&lt;2,&gt;=1.10 in /usr/local/lib/python3.10/dist-packages (from deprecated&gt;=1.2.13-&gt;sktime!=0.17.1,!=0.17.2,!=0.18.0,&lt;0.22.0,&gt;=0.16.1-&gt;pycaret) (1.14.1)
-Requirement already satisfied: jupyter-client in /usr/local/lib/python3.10/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (6.1.12)
-Requirement already satisfied: tornado&gt;=4.2 in /usr/local/lib/python3.10/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (6.3.2)
-Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.3 in /usr/local/lib/python3.10/dist-packages (from jedi&gt;=0.16-&gt;ipython&gt;=5.5.0-&gt;pycaret) (0.8.3)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: attrs&gt;=22.2.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;pycaret) (23.1.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-client in /usr/local/lib/python3.10/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (6.1.12)
+Requirement already satisfied: tornado&gt;=4.2 in /usr/local/lib/python3.10/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (6.3.2)
+Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.3 in /usr/local/lib/python3.10/dist-packages (from jedi&gt;=0.16-&gt;ipython&gt;=5.5.0-&gt;pycaret) (0.8.3)
+Requirement already satisfied: attrs&gt;=22.2.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;pycaret) (23.1.0)
 Requirement already satisfied: jsonschema-specifications&gt;=2023.03.6 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;pycaret) (2023.11.1)
 Requirement already satisfied: referencing&gt;=0.28.4 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;pycaret) (0.31.0)
 Requirement already satisfied: rpds-py&gt;=0.7.1 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;pycaret) (0.13.0)
-Requirement already satisfied: ptyprocess&gt;=0.5 in /usr/local/lib/python3.10/dist-packages (from pexpect&gt;4.3-&gt;ipython&gt;=5.5.0-&gt;pycaret) (0.7.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: ptyprocess&gt;=0.5 in /usr/local/lib/python3.10/dist-packages (from pexpect&gt;4.3-&gt;ipython&gt;=5.5.0-&gt;pycaret) (0.7.0)
 Requirement already satisfied: wcwidth in /usr/local/lib/python3.10/dist-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython&gt;=5.5.0-&gt;pycaret) (0.2.10)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.10/dist-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (6.5.5)
 Requirement already satisfied: platformdirs&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from jupyter-core-&gt;nbformat&gt;=4.2.0-&gt;pycaret) (4.0.0)
-Requirement already satisfied: itsdangerous&gt;=2.0 in /usr/local/lib/python3.10/dist-packages (from Flask&lt;3.1,&gt;=1.0.4-&gt;dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (2.1.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: itsdangerous&gt;=2.0 in /usr/local/lib/python3.10/dist-packages (from Flask&lt;3.1,&gt;=1.0.4-&gt;dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (2.1.2)
 Requirement already satisfied: click&gt;=8.0 in /usr/local/lib/python3.10/dist-packages (from Flask&lt;3.1,&gt;=1.0.4-&gt;dash&lt;3.0.0,&gt;=2.11.0-&gt;plotly-resampler&gt;=0.8.3.1-&gt;pycaret) (8.1.7)
 Requirement already satisfied: pyzmq&lt;25,&gt;=17 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (23.2.1)
 Requirement already satisfied: argon2-cffi in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (23.1.0)
@@ -580,10 +559,10 @@ Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3
 Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (0.7.4)
 Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.5.0)
 Requirement already satisfied: tinycss2 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.2.1)
-Requirement already satisfied: argon2-cffi-bindings in /usr/local/lib/python3.10/dist-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (21.2.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: anyio&lt;4,&gt;=3.1.0 in /usr/local/lib/python3.10/dist-packages (from jupyter-server&gt;=1.8-&gt;nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (3.7.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: argon2-cffi-bindings in /usr/local/lib/python3.10/dist-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (21.2.0)
+Requirement already satisfied: anyio&lt;4,&gt;=3.1.0 in /usr/local/lib/python3.10/dist-packages (from jupyter-server&gt;=1.8-&gt;nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (3.7.1)
 Requirement already satisfied: websocket-client in /usr/local/lib/python3.10/dist-packages (from jupyter-server&gt;=1.8-&gt;nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.6.4)
 Requirement already satisfied: cffi&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (1.16.0)
 Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4-&gt;nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.6.5-&gt;pycaret) (2.5)
@@ -597,16 +576,6 @@ Requirement already satisfied: pycparser in /usr/local/lib/python3.10/dist-packa
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Ignoring invalid distribution -atplotlib (/usr/local/lib/python3.10/dist-packages)</span>
 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: matplotlib, sktime, scikit-plot, pyod, dash, pmdarima, plotly-resampler, category-encoders, tbats, pycaret
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.</span>
-<span class=" -Color -Color-Red">lida 0.0.10 requires fastapi, which is not installed.</span>
-<span class=" -Color -Color-Red">lida 0.0.10 requires python-multipart, which is not installed.</span>
-<span class=" -Color -Color-Red">lida 0.0.10 requires uvicorn, which is not installed.</span>
-Successfully installed category-encoders-2.6.3 dash-2.14.1 matplotlib-3.6.0 plotly-resampler-0.9.1 pmdarima-2.0.4 pycaret-3.2.0 pyod-1.1.2 scikit-plot-0.3.7 sktime-0.21.1 tbats-1.1.3
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Ignoring invalid distribution -atplotlib (/usr/local/lib/python3.10/dist-packages)</span>
@@ -634,105 +603,168 @@ Collecting jinja2&lt;3.1,&gt;=3.0 (from dataprep)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting jsonpath-ng&lt;2.0,&gt;=1.5 (from dataprep)
   Using cached jsonpath_ng-1.6.0-py3-none-any.whl (29 kB)
 Collecting metaphone&lt;0.7,&gt;=0.6 (from dataprep)
-  Using cached Metaphone-0.6.tar.gz (14 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
+  Using cached Metaphone-0.6-py3-none-any.whl
 Requirement already satisfied: nltk&lt;4.0.0,&gt;=3.6.7 in /usr/local/lib/python3.10/dist-packages (from dataprep) (3.8.1)
 Requirement already satisfied: numpy&lt;2.0,&gt;=1.21 in /usr/local/lib/python3.10/dist-packages (from dataprep) (1.23.5)
 Requirement already satisfied: pandas&lt;2.0,&gt;=1.1 in /usr/local/lib/python3.10/dist-packages (from dataprep) (1.5.3)
 Requirement already satisfied: pydantic&lt;2.0,&gt;=1.6 in /usr/local/lib/python3.10/dist-packages (from dataprep) (1.10.13)
 Requirement already satisfied: pydot&lt;2.0.0,&gt;=1.4.2 in /usr/local/lib/python3.10/dist-packages (from dataprep) (1.4.2)
+Collecting python-crfsuite==0.9.8 (from dataprep)
+  Using cached python_crfsuite-0.9.8-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.0 MB)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting python-crfsuite==0.9.8 (from dataprep)
-  Using cached python_crfsuite-0.9.8-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.0 MB)
-Collecting python-stdnum&lt;2.0,&gt;=1.16 (from dataprep)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting python-stdnum&lt;2.0,&gt;=1.16 (from dataprep)
   Using cached python_stdnum-1.19-py2.py3-none-any.whl (1.0 MB)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 169, in exc_logging_wrapper
-    status = run_func(*args)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/req_command.py&quot;, line 242, in wrapper
-    return func(self, options, args)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/commands/install.py&quot;, line 377, in run
-    requirement_set = resolver.resolve(
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/resolution/resolvelib/resolver.py&quot;, line 92, in resolve
-    result = self._result = resolver.resolve(
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/resolvelib/resolvers.py&quot;, line 546, in resolve
-    state = resolution.resolve(requirements, max_rounds=max_rounds)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/resolvelib/resolvers.py&quot;, line 427, in resolve
-    failure_causes = self._attempt_to_pin_criterion(name)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/resolvelib/resolvers.py&quot;, line 239, in _attempt_to_pin_criterion
-    criteria = self._get_updated_criteria(candidate)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/resolvelib/resolvers.py&quot;, line 230, in _get_updated_criteria
-    self._add_to_criteria(criteria, requirement, parent=candidate)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/resolvelib/resolvers.py&quot;, line 173, in _add_to_criteria
-    if not criterion.candidates:
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/resolvelib/structs.py&quot;, line 156, in __bool__
-    return bool(self._sequence)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/resolution/resolvelib/found_candidates.py&quot;, line 155, in __bool__
-    return any(self)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/resolution/resolvelib/found_candidates.py&quot;, line 143, in &lt;genexpr&gt;
-    return (c for c in iterator if id(c) not in self._incompatible_ids)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/resolution/resolvelib/found_candidates.py&quot;, line 44, in _iter_built
-    for version, func in infos:
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/resolution/resolvelib/factory.py&quot;, line 279, in iter_index_candidate_infos
-    result = self._finder.find_best_candidate(
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/index/package_finder.py&quot;, line 890, in find_best_candidate
-    candidates = self.find_all_candidates(project_name)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/index/package_finder.py&quot;, line 831, in find_all_candidates
-    page_candidates = list(page_candidates_it)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/index/sources.py&quot;, line 134, in page_candidates
-    yield from self._candidates_from_page(self._link)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/index/package_finder.py&quot;, line 798, in process_project_url
-    package_links = self.evaluate_links(
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/index/package_finder.py&quot;, line 778, in evaluate_links
-    candidate = self.get_install_candidate(link_evaluator, link)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/index/package_finder.py&quot;, line 759, in get_install_candidate
-    result, detail = link_evaluator.evaluate_link(link)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/index/package_finder.py&quot;, line 202, in evaluate_link
-    if not wheel.supported(supported_tags):
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/models/wheel.py&quot;, line 92, in supported
-    return not self.file_tags.isdisjoint(tags)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/packaging/tags.py&quot;, line 86, in __hash__
-    def __hash__(self) -&gt; int:
-KeyboardInterrupt
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &quot;/usr/local/bin/pip3&quot;, line 8, in &lt;module&gt;
-    sys.exit(main())
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/main.py&quot;, line 79, in main
-    return command.main(cmd_args)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 101, in main
-    return self._main(args)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 223, in _main
-    return run(options, args)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 206, in exc_logging_wrapper
-    logger.critical(&quot;Operation cancelled by user&quot;)
-  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1524, in critical
-    self._log(CRITICAL, msg, args, **kwargs)
-  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1624, in _log
-    self.handle(record)
-  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1634, in handle
-    self.callHandlers(record)
-  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1696, in callHandlers
-    hdlr.handle(record)
-  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 968, in handle
-    self.emit(record)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/utils/logging.py&quot;, line 177, in emit
-    self.console.print(renderable, overflow=&quot;ignore&quot;, crop=False, style=style)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/console.py&quot;, line 1683, in print
-    render_options = self.options.update(
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/console.py&quot;, line 980, in options
-    return ConsoleOptions(
-KeyboardInterrupt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting rapidfuzz&lt;3.0.0,&gt;=2.1.2 (from dataprep)
+  Using cached rapidfuzz-2.15.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting regex&lt;2022.0.0,&gt;=2021.8.3 (from dataprep)
+  Using cached regex-2021.11.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (764 kB)
+Requirement already satisfied: scipy&lt;2.0,&gt;=1.8 in /usr/local/lib/python3.10/dist-packages (from dataprep) (1.10.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting sqlalchemy==1.3.24 (from dataprep)
+  Using cached SQLAlchemy-1.3.24-cp310-cp310-linux_x86_64.whl
+Requirement already satisfied: tqdm&lt;5.0,&gt;=4.48 in /usr/local/lib/python3.10/dist-packages (from dataprep) (4.66.1)
+Collecting varname&lt;0.9.0,&gt;=0.8.1 (from dataprep)
+  Using cached varname-0.8.3-py3-none-any.whl (21 kB)
+Requirement already satisfied: wordcloud&lt;2.0,&gt;=1.8 in /usr/local/lib/python3.10/dist-packages (from dataprep) (1.9.2)
+Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.10/dist-packages (from aiohttp&lt;4.0,&gt;=3.6-&gt;dataprep) (23.1.0)
+Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.10/dist-packages (from aiohttp&lt;4.0,&gt;=3.6-&gt;dataprep) (3.3.2)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.10/dist-packages (from aiohttp&lt;4.0,&gt;=3.6-&gt;dataprep) (6.0.4)
+Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.10/dist-packages (from aiohttp&lt;4.0,&gt;=3.6-&gt;dataprep) (4.0.3)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.10/dist-packages (from aiohttp&lt;4.0,&gt;=3.6-&gt;dataprep) (1.9.2)
+Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.10/dist-packages (from aiohttp&lt;4.0,&gt;=3.6-&gt;dataprep) (1.4.0)
+Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.10/dist-packages (from aiohttp&lt;4.0,&gt;=3.6-&gt;dataprep) (1.3.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: packaging&gt;=16.8 in /usr/local/lib/python3.10/dist-packages (from bokeh&lt;3,&gt;=2-&gt;dataprep) (23.2)
+Requirement already satisfied: pillow&gt;=7.1.0 in /usr/local/lib/python3.10/dist-packages (from bokeh&lt;3,&gt;=2-&gt;dataprep) (9.4.0)
+Requirement already satisfied: PyYAML&gt;=3.10 in /usr/local/lib/python3.10/dist-packages (from bokeh&lt;3,&gt;=2-&gt;dataprep) (6.0.1)
+Requirement already satisfied: tornado&gt;=5.1 in /usr/local/lib/python3.10/dist-packages (from bokeh&lt;3,&gt;=2-&gt;dataprep) (6.3.2)
+Requirement already satisfied: typing-extensions&gt;=3.10.0 in /usr/local/lib/python3.10/dist-packages (from bokeh&lt;3,&gt;=2-&gt;dataprep) (4.5.0)
+Requirement already satisfied: click&gt;=8.0 in /usr/local/lib/python3.10/dist-packages (from dask[array,dataframe,delayed]&gt;=2022.3.0-&gt;dataprep) (8.1.7)
+Requirement already satisfied: cloudpickle&gt;=1.5.0 in /usr/local/lib/python3.10/dist-packages (from dask[array,dataframe,delayed]&gt;=2022.3.0-&gt;dataprep) (2.2.1)
+Requirement already satisfied: fsspec&gt;=2021.09.0 in /usr/local/lib/python3.10/dist-packages (from dask[array,dataframe,delayed]&gt;=2022.3.0-&gt;dataprep) (2023.6.0)
+Requirement already satisfied: partd&gt;=1.2.0 in /usr/local/lib/python3.10/dist-packages (from dask[array,dataframe,delayed]&gt;=2022.3.0-&gt;dataprep) (1.4.1)
+Requirement already satisfied: toolz&gt;=0.10.0 in /usr/local/lib/python3.10/dist-packages (from dask[array,dataframe,delayed]&gt;=2022.3.0-&gt;dataprep) (0.12.0)
+Requirement already satisfied: importlib-metadata&gt;=4.13.0 in /usr/local/lib/python3.10/dist-packages (from dask[array,dataframe,delayed]&gt;=2022.3.0-&gt;dataprep) (6.8.0)
+Requirement already satisfied: Werkzeug&gt;=2.2.2 in /usr/local/lib/python3.10/dist-packages (from flask&lt;3,&gt;=2-&gt;dataprep) (3.0.1)
+Requirement already satisfied: itsdangerous&gt;=2.0 in /usr/local/lib/python3.10/dist-packages (from flask&lt;3,&gt;=2-&gt;dataprep) (2.1.2)
+Requirement already satisfied: Six in /usr/local/lib/python3.10/dist-packages (from flask_cors&lt;4.0.0,&gt;=3.0.10-&gt;dataprep) (1.16.0)
+Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (5.5.6)
+Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.2.0)
+Requirement already satisfied: traitlets&gt;=4.3.1 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (5.7.1)
+Requirement already satisfied: widgetsnbextension~=3.6.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (3.6.6)
+Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (7.34.0)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.10/dist-packages (from ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (3.0.9)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.10/dist-packages (from jinja2&lt;3.1,&gt;=3.0-&gt;dataprep) (2.1.3)
+Collecting ply (from jsonpath-ng&lt;2.0,&gt;=1.5-&gt;dataprep)
+  Using cached ply-3.11-py2.py3-none-any.whl (49 kB)
+Requirement already satisfied: joblib in /usr/local/lib/python3.10/dist-packages (from nltk&lt;4.0.0,&gt;=3.6.7-&gt;dataprep) (1.3.2)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.10/dist-packages (from pandas&lt;2.0,&gt;=1.1-&gt;dataprep) (2.8.2)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas&lt;2.0,&gt;=1.1-&gt;dataprep) (2023.3.post1)
+Requirement already satisfied: pyparsing&gt;=2.1.4 in /usr/local/lib/python3.10/dist-packages (from pydot&lt;2.0.0,&gt;=1.4.2-&gt;dataprep) (3.1.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting asttokens&lt;3.0.0,&gt;=2.0.0 (from varname&lt;0.9.0,&gt;=0.8.1-&gt;dataprep)
+  Using cached asttokens-2.4.1-py2.py3-none-any.whl (27 kB)
+Collecting executing&lt;0.9.0,&gt;=0.8.3 (from varname&lt;0.9.0,&gt;=0.8.1-&gt;dataprep)
+  Using cached executing-0.8.3-py2.py3-none-any.whl (16 kB)
+Collecting pure_eval&lt;1.0.0 (from varname&lt;0.9.0,&gt;=0.8.1-&gt;dataprep)
+  Using cached pure_eval-0.2.2-py3-none-any.whl (11 kB)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (from wordcloud&lt;2.0,&gt;=1.8-&gt;dataprep) (3.6.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: zipp&gt;=0.5 in /usr/local/lib/python3.10/dist-packages (from importlib-metadata&gt;=4.13.0-&gt;dask[array,dataframe,delayed]&gt;=2022.3.0-&gt;dataprep) (3.17.0)
+Requirement already satisfied: jupyter-client in /usr/local/lib/python3.10/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (6.1.12)
+Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (67.7.2)
+Requirement already satisfied: jedi&gt;=0.16 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.19.1)
+Requirement already satisfied: decorator in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (4.4.2)
+Requirement already satisfied: pickleshare in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.7.5)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (3.0.41)
+Requirement already satisfied: pygments in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (2.16.1)
+Requirement already satisfied: backcall in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.2.0)
+Requirement already satisfied: matplotlib-inline in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.1.6)
+Requirement already satisfied: pexpect&gt;4.3 in /usr/local/lib/python3.10/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (4.8.0)
+Requirement already satisfied: locket in /usr/local/lib/python3.10/dist-packages (from partd&gt;=1.2.0-&gt;dask[array,dataframe,delayed]&gt;=2022.3.0-&gt;dataprep) (1.0.0)
+Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.10/dist-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (6.5.5)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.10/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp&lt;4.0,&gt;=3.6-&gt;dataprep) (3.4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib-&gt;wordcloud&lt;2.0,&gt;=1.8-&gt;dataprep) (1.2.0)
+Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib-&gt;wordcloud&lt;2.0,&gt;=1.8-&gt;dataprep) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib-&gt;wordcloud&lt;2.0,&gt;=1.8-&gt;dataprep) (4.44.3)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib-&gt;wordcloud&lt;2.0,&gt;=1.8-&gt;dataprep) (1.4.5)
+Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.3 in /usr/local/lib/python3.10/dist-packages (from jedi&gt;=0.16-&gt;ipython&gt;=4.0.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.8.3)
+Requirement already satisfied: pyzmq&lt;25,&gt;=17 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (23.2.1)
+Requirement already satisfied: argon2-cffi in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (23.1.0)
+Requirement already satisfied: jupyter-core&gt;=4.6.1 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (5.5.0)
+Requirement already satisfied: nbformat in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (5.9.2)
+Requirement already satisfied: nbconvert&gt;=5 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (6.5.4)
+Requirement already satisfied: nest-asyncio&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (1.5.8)
+Requirement already satisfied: Send2Trash&gt;=1.8.0 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (1.8.2)
+Requirement already satisfied: terminado&gt;=0.8.3 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.18.0)
+Requirement already satisfied: prometheus-client in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.18.0)
+Requirement already satisfied: nbclassic&gt;=0.4.7 in /usr/local/lib/python3.10/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (1.0.0)
+Requirement already satisfied: ptyprocess&gt;=0.5 in /usr/local/lib/python3.10/dist-packages (from pexpect&gt;4.3-&gt;ipython&gt;=4.0.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.7.0)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.10/dist-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.2.10)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: platformdirs&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from jupyter-core&gt;=4.6.1-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (4.0.0)
+Requirement already satisfied: jupyter-server&gt;=1.8 in /usr/local/lib/python3.10/dist-packages (from nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (1.24.0)
+Requirement already satisfied: notebook-shim&gt;=0.2.3 in /usr/local/lib/python3.10/dist-packages (from nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.2.3)
+Requirement already satisfied: lxml in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (4.9.3)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (4.11.2)
+Requirement already satisfied: bleach in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (6.1.0)
+Requirement already satisfied: defusedxml in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.7.1)
+Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.4)
+Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.2.2)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.8.4)
+Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.7.4)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (1.5.0)
+Requirement already satisfied: tinycss2 in /usr/local/lib/python3.10/dist-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (1.2.1)
+Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.10/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (2.19.0)
+Requirement already satisfied: jsonschema&gt;=2.6 in /usr/local/lib/python3.10/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (4.19.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: argon2-cffi-bindings in /usr/local/lib/python3.10/dist-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (21.2.0)
+Requirement already satisfied: jsonschema-specifications&gt;=2023.03.6 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (2023.11.1)
+Requirement already satisfied: referencing&gt;=0.28.4 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.31.0)
+Requirement already satisfied: rpds-py&gt;=0.7.1 in /usr/local/lib/python3.10/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.13.0)
+Requirement already satisfied: anyio&lt;4,&gt;=3.1.0 in /usr/local/lib/python3.10/dist-packages (from jupyter-server&gt;=1.8-&gt;nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (3.7.1)
+Requirement already satisfied: websocket-client in /usr/local/lib/python3.10/dist-packages (from jupyter-server&gt;=1.8-&gt;nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (1.6.4)
+Requirement already satisfied: cffi&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (1.16.0)
+Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4-&gt;nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (2.5)
+Requirement already satisfied: webencodings in /usr/local/lib/python3.10/dist-packages (from bleach-&gt;nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (0.5.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: sniffio&gt;=1.1 in /usr/local/lib/python3.10/dist-packages (from anyio&lt;4,&gt;=3.1.0-&gt;jupyter-server&gt;=1.8-&gt;nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (1.3.0)
+Requirement already satisfied: exceptiongroup in /usr/local/lib/python3.10/dist-packages (from anyio&lt;4,&gt;=3.1.0-&gt;jupyter-server&gt;=1.8-&gt;nbclassic&gt;=0.4.7-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (1.1.3)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.10/dist-packages (from cffi&gt;=1.0.1-&gt;argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&lt;8.0,&gt;=7.5-&gt;dataprep) (2.21)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Ignoring invalid distribution -atplotlib (/usr/local/lib/python3.10/dist-packages)</span>
+Installing collected packages: regex, python-stdnum, python-crfsuite, pure_eval, ply, metaphone, executing, sqlalchemy, rapidfuzz, jsonpath-ng, jinja2, asttokens, varname, bokeh, flask_cors, dataprep
+  Attempting uninstall: regex
+    Found existing installation: regex 2023.6.3
+    Uninstalling regex-2023.6.3:
+      Successfully uninstalled regex-2023.6.3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Attempting uninstall: sqlalchemy
+    Found existing installation: SQLAlchemy 2.0.23
+    Uninstalling SQLAlchemy-2.0.23:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Successfully uninstalled SQLAlchemy-2.0.23
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">ERROR: Operation cancelled by user</span>
+
 </pre></div>
 </div>
 </div>
@@ -2833,6 +2865,15 @@ Di bawah ini adalah representasi diagram dari Pertumbuhan Pohon Bijaksana Daun:<
                 <footer class="prev-next-footer">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
