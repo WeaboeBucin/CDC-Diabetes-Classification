@@ -30,12 +30,7 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-from google.colab import drive
-drive.mount('/content/drive')
-
-import os
-
-# Pindah ke direktori yang sesuai di Google Drive
-os.chdir('/content/drive/MyDrive/PSD/Diabetes Indicator/')
+!pip install pycaret
+!pip install dataprep
 -------------------
 
