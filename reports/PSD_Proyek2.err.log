@@ -1,15 +1,4 @@
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 778, in _async_poll_for_reply
-    msg = await ensure_async(self.kc.shell_channel.get_msg(timeout=new_timeout))
-  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 189, in ensure_async
-    result = await obj
-  File "/usr/local/lib/python3.10/dist-packages/jupyter_client/asynchronous/channels.py", line 48, in get_msg
-    raise Empty
-_queue.Empty
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
   File "/usr/local/lib/python3.10/dist-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
     executenb(
   File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1305, in execute
@@ -20,17 +9,118 @@ Traceback (most recent call last):
     return future.result()
   File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 705, in async_execute
     await self.async_execute_cell(
-  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1001, in async_execute_cell
-    exec_reply = await self.task_poll_for_reply
-  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 802, in _async_poll_for_reply
-    error_on_timeout_execute_reply = await self._async_handle_timeout(timeout, cell)
-  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 852, in _async_handle_timeout
-    raise CellTimeoutError.error_from_timeout_and_cell(
-nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 30 seconds.
-The message was: Cell execution timed out.
-Here is a preview of the cell contents:
--------------------
-!pip install pycaret
-!pip install dataprep
--------------------
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pickle
+
+plt.style.use('seaborn-darkgrid')
+
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.svm import LinearSVC
+from sklearn import preprocessing
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import LinearSVC
+from sklearn.metrics import accuracy_score,precision_score, f1_score, confusion_matrix
+from imblearn.over_sampling import SMOTE
+from sklearn.model_selection import GridSearchCV
+from dataprep.eda import plot_missing
+------------------
+
+----- stderr -----
+<ipython-input-2-600ec31c78f3>:7: MatplotlibDeprecationWarning: The seaborn styles shipped by Matplotlib are deprecated since 3.6, as they no longer correspond to the styles shipped by seaborn. However, they will remain available as 'seaborn-v0_8-<style>'. Alternatively, directly use the seaborn API instead.
+  plt.style.use('seaborn-darkgrid')
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mImportError[0m                               Traceback (most recent call last)
+[0;32m<ipython-input-2-600ec31c78f3>[0m in [0;36m<cell line: 21>[0;34m()[0m
+[1;32m     19[0m [0;32mfrom[0m [0mimblearn[0m[0;34m.[0m[0mover_sampling[0m [0;32mimport[0m [0mSMOTE[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     20[0m [0;32mfrom[0m [0msklearn[0m[0;34m.[0m[0mmodel_selection[0m [0;32mimport[0m [0mGridSearchCV[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 21[0;31m [0;32mfrom[0m [0mdataprep[0m[0;34m.[0m[0meda[0m [0;32mimport[0m [0mplot_missing[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m/usr/local/lib/python3.10/dist-packages/dataprep/eda/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      3[0m [0;34m==[0m[0;34m==[0m[0;34m==[0m[0;34m==[0m[0;34m==[0m[0;34m==[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m """
+[0;32m----> 5[0;31m [0;32mfrom[0m [0mbokeh[0m[0;34m.[0m[0mio[0m [0;32mimport[0m [0moutput_notebook[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      6[0m [0;34m[0m[0m
+[1;32m      7[0m [0;32mfrom[0m [0;34m.[0m[0;34m.[0m[0mutils[0m [0;32mimport[0m [0mis_notebook[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/google/colab/_import_hooks/_bokeh.py[0m in [0;36mload_module[0;34m(self, name)[0m
+[1;32m     43[0m [0;34m[0m[0m
+[1;32m     44[0m     [0mpreviously_loaded[0m [0;34m=[0m [0mname[0m [0;32min[0m [0msys[0m[0;34m.[0m[0mmodules[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 45[0;31m     [0m_bokeh_io_module[0m [0;34m=[0m [0mimp[0m[0;34m.[0m[0mload_module[0m[0;34m([0m[0mname[0m[0;34m,[0m [0;34m*[0m[0mself[0m[0;34m.[0m[0mmodule_info[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     46[0m [0;34m[0m[0m
+[1;32m     47[0m     [0;32mif[0m [0;32mnot[0m [0mpreviously_loaded[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3.10/imp.py[0m in [0;36mload_module[0;34m(name, file, filename, details)[0m
+[1;32m    243[0m             [0;32mreturn[0m [0mload_dynamic[0m[0;34m([0m[0mname[0m[0;34m,[0m [0mfilename[0m[0;34m,[0m [0mfile[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    244[0m     [0;32melif[0m [0mtype_[0m [0;34m==[0m [0mPKG_DIRECTORY[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 245[0;31m         [0;32mreturn[0m [0mload_package[0m[0;34m([0m[0mname[0m[0;34m,[0m [0mfilename[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    246[0m     [0;32melif[0m [0mtype_[0m [0;34m==[0m [0mC_BUILTIN[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    247[0m         [0;32mreturn[0m [0minit_builtin[0m[0;34m([0m[0mname[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3.10/imp.py[0m in [0;36mload_package[0;34m(name, path)[0m
+[1;32m    215[0m         [0;32mreturn[0m [0m_exec[0m[0;34m([0m[0mspec[0m[0;34m,[0m [0msys[0m[0;34m.[0m[0mmodules[0m[0;34m[[0m[0mname[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    216[0m     [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 217[0;31m         [0;32mreturn[0m [0m_load[0m[0;34m([0m[0mspec[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    218[0m [0;34m[0m[0m
+[1;32m    219[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/bokeh/io/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     26[0m [0;32mfrom[0m [0;34m.[0m[0mnotebook[0m [0;32mimport[0m [0minstall_jupyter_hooks[0m[0;34m,[0m [0minstall_notebook_hook[0m[0;34m,[0m [0mpush_notebook[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     27[0m [0;32mfrom[0m [0;34m.[0m[0moutput[0m [0;32mimport[0m [0moutput_file[0m[0;34m,[0m [0moutput_notebook[0m[0;34m,[0m [0mreset_output[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 28[0;31m [0;32mfrom[0m [0;34m.[0m[0msaving[0m [0;32mimport[0m [0msave[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     29[0m [0;32mfrom[0m [0;34m.[0m[0mshowing[0m [0;32mimport[0m [0mshow[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     30[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/bokeh/io/saving.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     32[0m [0;32mfrom[0m [0;34m.[0m[0;34m.[0m[0mcore[0m[0;34m.[0m[0mtemplates[0m [0;32mimport[0m [0mFILE[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     33[0m [0;32mfrom[0m [0;34m.[0m[0;34m.[0m[0mcore[0m[0;34m.[0m[0mtypes[0m [0;32mimport[0m [0mPathLike[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 34[0;31m [0;32mfrom[0m [0;34m.[0m[0;34m.[0m[0mmodels[0m[0;34m.[0m[0mlayouts[0m [0;32mimport[0m [0mLayoutDOM[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     35[0m [0;32mfrom[0m [0;34m.[0m[0;34m.[0m[0mresources[0m [0;32mimport[0m [0mResources[0m[0;34m,[0m [0mResourcesLike[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     36[0m [0;32mfrom[0m [0;34m.[0m[0;34m.[0m[0msettings[0m [0;32mimport[0m [0msettings[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/bokeh/models/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     33[0m [0;32mfrom[0m [0;34m.[0m[0;34m.[0m[0mcore[0m[0;34m.[0m[0mproperty[0m[0;34m.[0m[0mdataspec[0m [0;32mimport[0m [0mexpr[0m[0;34m,[0m [0mfield[0m[0;34m,[0m [0mvalue[0m  [0;31m# Legacy API[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     34[0m [0;32mfrom[0m [0;34m.[0m[0;34m.[0m[0mmodel[0m [0;32mimport[0m [0mModel[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 35[0;31m [0;32mfrom[0m [0;34m.[0m[0mannotations[0m [0;32mimport[0m [0;34m*[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     36[0m [0;32mfrom[0m [0;34m.[0m[0marrow_heads[0m [0;32mimport[0m [0;34m*[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     37[0m [0;32mfrom[0m [0;34m.[0m[0maxes[0m [0;32mimport[0m [0;34m*[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/bokeh/models/annotations/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     21[0m [0;34m[0m[0m
+[1;32m     22[0m [0;31m# Bokeh imports[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 23[0;31m from . import (
+[0m[1;32m     24[0m     [0mannotation[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     25[0m     [0marrows[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/bokeh/models/annotations/annotation.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     23[0m [0;31m# Bokeh imports[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     24[0m [0;32mfrom[0m [0;34m...[0m[0mcore[0m[0;34m.[0m[0mhas_props[0m [0;32mimport[0m [0mabstract[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 25[0;31m [0;32mfrom[0m [0;34m...[0m[0mcore[0m[0;34m.[0m[0mproperties[0m [0;32mimport[0m [0mInstance[0m[0;34m,[0m [0mInstanceDefault[0m[0;34m,[0m [0mOverride[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     26[0m [0;32mfrom[0m [0;34m.[0m[0;34m.[0m[0mrenderers[0m [0;32mimport[0m [0mRenderer[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     27[0m [0;32mfrom[0m [0;34m.[0m[0;34m.[0m[0msources[0m [0;32mimport[0m [0mColumnDataSource[0m[0;34m,[0m [0mDataSource[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mImportError[0m: cannot import name 'InstanceDefault' from 'bokeh.core.properties' (/usr/local/lib/python3.10/dist-packages/bokeh/core/properties.py)
+
+[0;31m---------------------------------------------------------------------------[0;32m
+NOTE: If your import is failing due to a missing package, you can
+manually install dependencies using either !pip or !apt.
+
+To view examples of installing some common dependencies, click the
+"Open Examples" button below.
+[0;31m---------------------------------------------------------------------------[0m
+
 
